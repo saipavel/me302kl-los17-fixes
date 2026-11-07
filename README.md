@@ -1,0 +1,165 @@
+# ME302KL: исправления для LineageOS 17.1
+
+Исправления ошибок, которые повторяются при каждой загрузке на **ASUS MeMO Pad FHD 10 LTE (ME302KL, duma)** с прошивкой **LineageOS 17.1 by DYo1 (сборка 20230306)** из [темы на 4PDA](https://4pda.to/forum/index.php?showtopic=545744).
+
+Ошибки найдены по dmesg, logcat, tombstones и dropbox. Всё проверено на одном планшете. Перед изменениями сделайте полный бэкап в TWRP.
+
+> Диагностику и исправления по adb провёл ИИ-ассистент Claude (Anthropic). Этот текст и скрипт тоже написал он. Со стороны владельца планшета — решения, что менять, и проверка результата.
+
+| # | Проблема | Исправление | Нужен TWRP |
+|---|---|---|---|
+| 1 | 104 ошибки защищённого видеодекодера при загрузке | скрыть декодер в `media_codecs.xml` | да |
+| 2 | Bluetooth падает дважды при каждой загрузке | отключить профиль HFP | нет |
+| 3 | Ошибки EXT4 на разделе system с 2023 года | `e2fsck` | да |
+| 4 | WebView 100 (апрель 2022) | обновить из Play Маркета | нет |
+| 5 | «Load average 8 на пустом планшете» | ничего, это косметика ядра | — |
+| 6 | Тормоза | отключить лишнее | нет |
+| 7 | Нет бэкапа IMEI | снять образы EFS | да |
+
+Пункты 1–4 и 7 выполняет **[скрипт](#скрипт)**.
+
+---
+
+## 1. Защищённый видеодекодер
+
+**Симптом.** Примерно через 15 секунд после загрузки mediaserver 52 раза пытается поднять `OMX.qcom.video.decoder.avc.secure`. В dmesg по 52 строки:
+
+```
+vidc: Invalid firmware metadata
+vcd_open returned error
+```
+
+**Причина.** Защищённая прошивка видеоблока (`vidc.mdt`) не проходит проверку в TrustZone, а стека Widevine L1 в сборке нет. Этот декодер здесь не заработает в любом случае. Отсюда и проблемы с DRM: защищённое видео максимум в SD через L3.
+
+**Решение.** Скрыть защищённый декодер. Обычный аппаратный (`OMX.qcom.video.decoder.avc`) продолжает работать, YouTube и VLC играют с ускорением. Root в системе не нужен, всё делается из TWRP.
+
+Проверьте, что system — это `mmcblk0p22`:
+
+```
+adb reboot recovery
+adb shell ls -l /dev/block/platform/msm_sdcc.1/by-name/ | grep system
+```
+
+Затем:
+
+```
+adb shell "mkdir -p /mnt/sys; mount -t ext4 -o rw /dev/block/mmcblk0p22 /mnt/sys"
+adb pull /mnt/sys/system/vendor/etc/media_codecs.xml media_codecs.xml.orig
+```
+
+В копии файла оберните в `<!-- ... -->` целиком блок `<MediaCodec name="OMX.qcom.video.decoder.avc.secure" ...> ... </MediaCodec>` и залейте её обратно:
+
+```
+adb push media_codecs.xml /tmp/media_codecs.xml
+adb shell "cat /tmp/media_codecs.xml > /mnt/sys/system/vendor/etc/media_codecs.xml; sync; umount /mnt/sys"
+adb reboot
+```
+
+Именно `cat`, а не `cp`/`mv`: так сохраняются владелец и SELinux-контекст файла.
+
+**Результат:** 104 → 0 ошибок. **Откат:** залить `media_codecs.xml.orig` тем же способом.
+
+## 2. Bluetooth падает при каждой загрузке
+
+**Симптом.** В tombstones падение `com.android.bluetooth` при регистрации профиля гарнитуры (Headset/HFP, Audio Gateway):
+
+```
+#00 pc ... libc.so (strlcpy+14)
+#01 pc ... libbluetooth.so (bta_ag_api_register(...)+432)
+```
+
+Система перезапускает Bluetooth, поэтому со стороны это выглядит как «глючный блютус».
+
+**Решение** (root не нужен):
+
+```
+adb shell settings put global bluetooth_disabled_profiles 2
+adb reboot
+```
+
+`2` — бит профиля HEADSET. Профиль A2DP (музыка) не затрагивается. Теряется только микрофон BT-гарнитуры для звонков.
+
+**Результат:** 0 падений, наушники работают (проверено). **Откат:** `adb shell settings delete global bluetooth_disabled_profiles`
+
+## 3. Ошибки EXT4 на разделе system
+
+**Симптом** в dmesg при каждой загрузке:
+
+```
+EXT4-fs (mmcblk0p22): error count since last fsck: 2
+EXT4-fs (mmcblk0p22): initial error at time 1686401765: ext4_mb_generate_buddy:741
+```
+
+Ошибка от 10.06.2023, видимо, ещё с установки прошивки. Сама система её не исправляет.
+
+**Решение** в TWRP, раздел не смонтирован:
+
+```
+adb shell e2fsck -f -n /dev/block/mmcblk0p22    # только проверка
+adb shell e2fsck -f -y /dev/block/mmcblk0p22    # исправление
+```
+
+## 4. WebView
+
+В сборке стоит WebView 100 (апрель 2022). Через него приложения показывают веб-страницы внутри себя. На Android 10 «Android System WebView» и Chrome из Play Маркета пока обновляются: у меня встал WebView 156. После установки выберите его в «Для разработчиков → Сервис WebView».
+
+## 5. Load average 8 — это не тормоза
+
+Нагрузку дают потоки governor-а ядра (`dbs_sync/N`, `kdbs_up`). Они ждут в состоянии D, и ядро учитывает их в load average. Процессор при этом в основном простаивает.
+
+## 6. Что помогло со скоростью
+
+- Отключено (`pm disable-user --user 0 ...`): LineageOS Updater, Jelly, Eleven, Exchange, Seedvault, хранители экрана, выбор живых обоев, Android Auto.
+- Удалён Google app: вместе с Docs это было около 200 МБ ОЗУ постоянно.
+- Анимации 0.5x.
+- Частный DNS `dns.adguard-dns.com`: реклама режется без лишних приложений.
+
+## 7. Бэкап EFS (IMEI)
+
+В TWRP:
+
+```
+adb shell
+cd /dev/block/platform/msm_sdcc.1/by-name
+mkdir -p /sdcard/efs
+for p in fsg m9kefs1 m9kefs2 m9kefs3 m9kefsc modemst1 modemst2 persist misc; do dd if=$p of=/sdcard/efs/$p.img; done
+md5sum /sdcard/efs/*.img > /sdcard/efs/efs.md5
+exit
+adb pull /sdcard/efs ./efs-backup
+```
+
+Не выкладывайте эти образы: в них идентификаторы устройства.
+
+Если TWRP пишет «Не удается смонтировать накопитель», хранилище переключено на USB-OTG. Выберите внутреннюю память (или: `twrp set tw_storage_path /data/media/0`).
+
+---
+
+## Скрипт
+
+[`me302kl-los17-fix.ps1`](me302kl-los17-fix.ps1) (Windows, PowerShell 5.1+) выполняет пункты 1–4 и 7 и сам перезагружает планшет в TWRP и обратно.
+
+```
+powershell -ExecutionPolicy Bypass -File .\me302kl-los17-fix.ps1 [-CheckOnly] [-Undo] [-SkipEfs] [-SkipFsck]
+```
+
+| Параметр | Что делает |
+|---|---|
+| без параметров | исправляет всё |
+| `-CheckOnly` | только проверка, ничего не меняется |
+| `-Undo` | возвращает Bluetooth и декодер как было |
+| `-SkipEfs` | без бэкапа EFS |
+| `-SkipFsck` | без `e2fsck` |
+
+- Нужен adb (platform-tools) рядом со скриптом или в PATH, на планшете — включённая отладка USB.
+- Проверяет, что подключён ровно один планшет и это duma.
+- Бэкапы и лог кладёт в `me302kl-backup-ДАТА` рядом со скриптом.
+- Уже исправленное пропускает, так что повторный запуск безопасен.
+- Останавливается, если `e2fsck` вернул ошибку или файл записался неверно (сверяется MD5).
+
+**Проверено:** `-CheckOnly` на планшете (Android → TWRP → Android). Правка `media_codecs.xml` и откат — на файле из этой сборки (XML корректен, откат байт в байт). Полный режим и `-Undo` на непочиненном планшете ещё не запускались. Если запускаете, пришлите `log.txt` из папки бэкапа.
+
+Скачивая скрипт вручную, сохраните его в UTF-8 с BOM, иначе PowerShell 5.1 покажет русский текст кракозябрами. Скачанный с GitHub файл уже в этой кодировке.
+
+## Лицензия
+
+MIT, см. [LICENSE](LICENSE).
