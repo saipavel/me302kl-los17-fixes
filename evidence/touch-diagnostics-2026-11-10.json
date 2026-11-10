@@ -1,0 +1,31 @@
+{
+  "event_capture_seconds": 38.89,
+  "frames": 2615,
+  "contacts_started": 14,
+  "max_simultaneous_contacts": 5,
+  "raw_coordinate_range": {
+    "x": [
+      6,
+      2745
+    ],
+    "y": [
+      11,
+      1653
+    ]
+  },
+  "coverage_grid": "12 columns x 8 rows",
+  "cells_visited": 96,
+  "cells_total": 96,
+  "unvisited_cells": [],
+  "kernel_event_buffer_drops": 0,
+  "steps_over_quarter_screen": [],
+  "new_touch_protocol_errors_during_interactive_capture": 20,
+  "idle_capture_seconds": 15,
+  "idle_touch_events": 0,
+  "new_checksum_errors": 2,
+  "new_malformed_packets": 18,
+  "earlier_kernel_log_checksum_errors": 16,
+  "earlier_kernel_log_malformed_packets": 242,
+  "app_layer_five_fingers_observed": true,
+  "limits": "Short manual test; no electrical self-test or raw capacitance matrix. Cannot establish long-term reliability or classify every lift as intentional."
+}
