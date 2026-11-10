@@ -1,0 +1,20 @@
+# ROM binaries, personal backups and raw diagnostics must stay local.
+*.so
+*.img
+*.win
+*.win[0-9]*
+*.apk
+*.dex
+*.class
+*.wav
+*.tar
+*.zip
+*.original
+*.patched
+*.restored
+__pycache__/
+backups/
+private/
+outputs/
+logcat*.txt
+tombstone*

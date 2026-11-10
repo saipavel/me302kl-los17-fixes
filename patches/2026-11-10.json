@@ -1,0 +1,80 @@
+{
+  "rom": "lineage-17.1-20230306-UNOFFICIAL-duma",
+  "repairs": {
+    "sensors": {
+      "device_path": "/vendor/bin/sensors.qcom",
+      "before_bytes": 220508,
+      "after_bytes": 220508,
+      "before_sha256": "9c0382d044af946ce755feaa7938e1a48c6773edc2ef8a6396a6443634b55f9b",
+      "after_sha256": "92c61ca6d25e155e6da045195ea76292d4e2eb78c07c5db5ba9b8ceaa50d13cc",
+      "edits": [
+        {
+          "offset": 71520,
+          "before_hex": "2de9f041a0b0194d06a8682218490df11604184fdff860807d44794450357f44f844f4f74cec0320fff76eff0646c0b9022040f2b62301958df80a006088adf808300390f4f740ec02460490039938463346f4f7eaea03200121424601abfff7f1fb34f8020ff4f730ecdce76a9201005ad901005e2f0200f4920100",
+          "after_hex": "2de9f041a0b01a4c7c4434250026002734f8020df4f758ec404276417f41013df6d101200821f9f79bf9c8b10446c0e9006740f200304ff0006140f20202c0f2080200900191029268462146f9f78efa18b92046f9f754f910b12046f9f7def9044878440068f5f741fc20b0bde8f081d4d901008663020000bf00bf"
+        }
+      ]
+    },
+    "bluetooth": {
+      "device_path": "/system/lib/libbluetooth.so",
+      "before_bytes": 3192484,
+      "after_bytes": 3192484,
+      "before_sha256": "2098343de9aafe4710e7dbc422ff3219bc75548f13d5a2abc6829ca94aaac68d",
+      "after_sha256": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+      "edits": [
+        {
+          "offset": 793894,
+          "before_hex": "2868027812f001010cbf5208426852b100290cbf411c816802a823224ff405731bf2ecec02e000208df8080029680a4612f80c0f10f001030cbf4008086958b107f12400002b0cbf511c496923224ff4f8731bf2d2ec02e000208df82c00",
+          "after_hex": "2e68d5f804803d464ff00209464514d2327812f001010cbf5208726842b100290cbf711cb1682846232224231bf2e6ec0c362435b9f10109e8d110e000bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf00bf"
+        },
+        {
+          "offset": 1441136,
+          "before_hex": "2020",
+          "after_hex": "6020"
+        }
+      ]
+    },
+    "gnss-nmea": {
+      "device_path": "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so",
+      "before_bytes": 96692,
+      "after_bytes": 96692,
+      "before_sha256": "40a4f8f8525733bf9eb6a65a94a5a2389f430e87c5a474bd984b9647f3df7c10",
+      "after_sha256": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+      "edits": [
+        {
+          "offset": 18334,
+          "before_hex": "3133736574546f45787465726e616c45504b636a",
+          "after_hex": "38636f707946726f6d45504b636a000000000000"
+        }
+      ]
+    },
+    "gps-assistance-config": {
+      "device_path": "/system/etc/gps_debug.conf",
+      "before_bytes": 1585,
+      "after_bytes": 1708,
+      "before_sha256": "336f1c49c575c018e1d07b107afd5db25cb1e8a22a7d4f5afa0a41c1c25220e7",
+      "after_sha256": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+      "edits": [
+        {
+          "offset": 1585,
+          "before_hex": "",
+          "after_hex": "0a23204d453330324b4c3a20757365207468652074657374656420485454505320656e64706f696e74207769746820612063757272656e7420475053207765656b2e0a585452415f5345525645525f313d68747470733a2f2f7874726170617468322e697a6174636c6f75642e6e65742f78747261322e62696e0a"
+        }
+      ]
+    },
+    "wifi-only-config": {
+      "device_path": "/vendor/build.prop",
+      "before_bytes": 1243,
+      "after_bytes": 1311,
+      "before_sha256": "114ab2a533b55d5a2d41e7aeeee50a29d34572e29a4a40a2fdf97052b7f53e3e",
+      "after_sha256": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
+      "edits": [
+        {
+          "offset": 1243,
+          "before_hex": "",
+          "after_hex": "0a23204d453330324b4c2057692d46692d6f6e6c7920636f6e66696775726174696f6e2c20323032362d31312d31300a726f2e726164696f2e6e6f72696c3d747275650a"
+        }
+      ]
+    }
+  }
+}

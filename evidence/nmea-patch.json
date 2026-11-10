@@ -1,0 +1,17 @@
+{
+  "source_file": "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so",
+  "before_sha256": "40a4f8f8525733bf9eb6a65a94a5a2389f430e87c5a474bd984b9647f3df7c10",
+  "after_sha256": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+  "import_offset": 18301,
+  "old_import": "_ZN7android8hardware11hidl_string13setToExternalEPKcj",
+  "new_import": "_ZN7android8hardware11hidl_string8copyFromEPKcj",
+  "sole_call_site": [
+    "0xe364"
+  ],
+  "rationale": "Copy length-delimited NMEA data into owned NUL-terminated storage. setToExternal assumes data[length] is NUL. The sole caller constructs an empty HIDL string first; its existing destructor releases the owned copy.",
+  "validation": [
+    "Six non-terminated source-buffer lengths copied and terminated correctly using the device libhidlbase, in an isolated app_process.",
+    "Patched GNSS bridge dynamically linked successfully on the tablet.",
+    "Installed hash verified after reboot; system mounted read-only."
+  ]
+}

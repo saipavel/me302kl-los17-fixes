@@ -1,0 +1,15 @@
+# Disable cellular-only daemons while retaining QMUX/modem support for GNSS.
+# Reversible with persist.me302kl.cellular_disabled=0 and package re-enabling.
+on property:persist.me302kl.cellular_disabled=1
+    stop ril-daemon
+    stop bridgemgrd
+    stop netmgrd
+
+on property:init.svc.ril-daemon=running && property:persist.me302kl.cellular_disabled=1
+    stop ril-daemon
+
+on property:init.svc.bridgemgrd=running && property:persist.me302kl.cellular_disabled=1
+    stop bridgemgrd
+
+on property:init.svc.netmgrd=running && property:persist.me302kl.cellular_disabled=1
+    stop netmgrd

@@ -1,0 +1,14 @@
+{
+  "arm_emulation_cases_passed": 316,
+  "log_ids_per_call": 52,
+  "verified": [
+    "bounds",
+    "64-bit mask",
+    "message header",
+    "timer cleanup",
+    "failure cleanup",
+    "stack alignment",
+    "register preservation",
+    "ASLR"
+  ]
+}

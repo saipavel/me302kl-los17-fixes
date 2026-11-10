@@ -1,0 +1,12 @@
+{
+  "original_one_name_crash_reproduced_in_arm_emulator": true,
+  "patched_arm_cases_passed": 252,
+  "checked": [
+    "0/1/2/3 names",
+    "short/long C++ strings",
+    "name truncation",
+    "guard-page bounds",
+    "metadata preservation",
+    "ASLR"
+  ]
+}
