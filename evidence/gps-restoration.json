@@ -33,17 +33,19 @@
     "path": "/vendor/build.prop",
     "before_sha256": "114ab2a533b55d5a2d41e7aeeee50a29d34572e29a4a40a2fdf97052b7f53e3e",
     "after_sha256": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
-    "backup_on_device": "/vendor/build.prop.pre-wifi-only",
-    "reason": "ConnectivityService skips mobile networks; RIL returns without blocking on absent radio HAL."
+    "reason": "ConnectivityService skips mobile networks; RIL returns without blocking on absent radio HAL.",
+    "original_backup_device_path": "/vendor/build.prop.pre-wifi-only",
+    "backup_current_location": "private verified PC archive; device copy removed at session cleanup"
   },
   "android_assistance_config": {
     "path": "/system/etc/gps_debug.conf",
     "before_sha256": "336f1c49c575c018e1d07b107afd5db25cb1e8a22a7d4f5afa0a41c1c25220e7",
     "after_sha256": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
-    "backup_on_device": "/system/etc/gps_debug.conf.pre-gps-restore",
-    "change": "Expose the three existing vendor XTRA_SERVER addresses to GnssConfiguration, which reads gps_debug.conf instead of gps.conf.",
+    "change": "Expose assistance configuration to Android 10, then replace the three HTTP sources with the tested current-week HTTPS endpoint.",
     "intermediate_sha256": "ef405e83c4351a03fd21953980c1c48efe55a4c34d5a5cbd388def37464c32f2",
-    "current_server": "https://xtrapath2.izatcloud.net/xtra2.bin"
+    "current_server": "https://xtrapath2.izatcloud.net/xtra2.bin",
+    "original_backup_device_path": "/system/etc/gps_debug.conf.pre-gps-restore",
+    "backup_current_location": "private verified PC archive; device copy removed at session cleanup"
   },
   "cellular_settings": {
     "airplane_mode_on": 0,

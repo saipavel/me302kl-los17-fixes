@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-10",
+  "installed_files": {
+    "sensors": {
+      "path": "/vendor/bin/sensors.qcom",
+      "sha256": "92c61ca6d25e155e6da045195ea76292d4e2eb78c07c5db5ba9b8ceaa50d13cc",
+      "matched": true
+    },
+    "bluetooth": {
+      "path": "/system/lib/libbluetooth.so",
+      "sha256": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+      "matched": true
+    },
+    "gnss-nmea": {
+      "path": "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so",
+      "sha256": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+      "matched": true
+    },
+    "gps-assistance-config": {
+      "path": "/system/etc/gps_debug.conf",
+      "sha256": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+      "matched": true
+    },
+    "wifi-only-config": {
+      "path": "/vendor/build.prop",
+      "sha256": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
+      "matched": true
+    },
+    "gps-driver": {
+      "path": "/vendor/lib/hw/gps.msm8960.so",
+      "sha256": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+      "matched": true
+    },
+    "gps-utils": {
+      "path": "/vendor/lib/libgps.utils.so",
+      "sha256": "10c99e64ad4643e70377980fbc4debd36c41b91c7e6f835481ebd71f2d5ee77c",
+      "matched": true
+    },
+    "native-gps-config": {
+      "path": "/vendor/etc/gps.conf",
+      "sha256": "3d803d7355496c9a3b139157fe7c2ba8c5f46fa56c2e80858bc2025936583ef4",
+      "matched": true
+    },
+    "cellular-init": {
+      "path": "/vendor/etc/init/me302kl-cellular-disabled.rc",
+      "sha256": "184e63aefe14815179372157ceb0865005f3768c1435acc16025a804637ffeee",
+      "matched": true
+    }
+  },
+  "system_read_only": true,
+  "sensor_service": "running",
+  "bluetooth_on": true,
+  "bluetooth_crashes_since_final_boot": 0,
+  "wifi_default_network_present": false,
+  "wifi_enabled": true,
+  "wifi_observation": "Connected after final reboot. Later disconnect logged as local_gen=false, reason=1; no specific cause established.",
+  "crash_buffer_empty": true,
+  "modem_fatal_since_final_boot": false,
+  "settings": {
+    "airplane_mode_on": "0",
+    "bluetooth_disabled_profiles": "0",
+    "mobile_data": "0",
+    "data_roaming": "0",
+    "stay_on_while_plugged_in": "0"
+  },
+  "screen_timeout_ms": "300000",
+  "rooted_adb_enabled": true,
+  "retained_apps": {
+    "com.github.axet.audiorecorder": true,
+    "com.google.android.apps.maps": true
+  },
+  "gpstest_removed": true,
+  "temporary_directory_empty": true,
+  "data_available_kib": 6934756,
+  "data_used_kib": 4728868,
+  "gps_fix_obtained": false,
+  "modem_last_explicit_state": "LOW_POWER (1); no boot helper installed",
+  "limits": "No new outdoor test or functional headset recording was run after the final reboot. Long-term stability and battery life unmeasured."
+}

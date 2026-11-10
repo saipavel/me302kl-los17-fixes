@@ -1,0 +1,7 @@
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.c text eol=lf
+*.S text eol=lf
+*.rc text eol=lf
+*.ps1 text eol=crlf
