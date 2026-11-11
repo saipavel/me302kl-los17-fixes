@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-11",
+  "install": {
+    "original_sha256": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+    "adapter_sha256": "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+    "source_sha256": "7e7e164d65a6815534d9f30918f7fe68d44484691f8c0c5b6742fc77f8f4a28f",
+    "feature_property": "persist.me302kl.gps_power_control",
+    "enabled": "1",
+    "original_location_mode": "0",
+    "status": "verified: Location toggles, active app request, reboot with Location off, reboot with Location on"
+  },
+  "app_request_verification": {
+    "boot_location_off_mode": 1,
+    "cycles": [],
+    "gpstest_request_started": true,
+    "gpstest_mode": 0,
+    "final_mode": 1
+  },
+  "second_boot_location_enabled": {
+    "location_enabled_at_boot": true,
+    "mode_after_enabled_boot": 0,
+    "mode_after_location_disabled": 1,
+    "crash_buffer_empty": true,
+    "service_states": {
+      "sensors": "running",
+      "qmuxd": "running",
+      "kickstart": "running",
+      "ril-daemon": "stopped",
+      "bridgemgrd": "stopped",
+      "netmgrd": "stopped"
+    },
+    "hashes": {
+      "/vendor/bin/sensors.qcom": "92c61ca6d25e155e6da045195ea76292d4e2eb78c07c5db5ba9b8ceaa50d13cc",
+      "/system/lib/libbluetooth.so": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+      "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+      "/vendor/lib/hw/gps.msm8960.so": "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+      "/vendor/lib/hw/gps.msm8960.base.so": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178"
+    },
+    "location_mode_final": "0",
+    "screen_off_timeout_final": "300000",
+    "wifi_on": "1",
+    "bluetooth_on": "1"
+  },
+  "location_toggle_round_trips_observed": 2,
+  "outdoor_fix_after_adapter_installation_confirmed": false
+}
