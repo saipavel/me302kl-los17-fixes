@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-11",
+  "scope": "Read-only live system, kernel, service, metadata and log audit. No reboot, repair, stress test, recording or app-data changes during this audit.",
+  "android_version": "10",
+  "security_patch_level": "2023-02-05",
+  "current_crash_buffer_empty": true,
+  "no_anr_since_boot": true,
+  "kernel_findings": {
+    "storage_io_errors": 0,
+    "fatal_crashes": 0,
+    "oom_events": 0,
+    "touch_packet_errors": 0
+  },
+  "battery": {
+    "full_charge_mah": 3576.0,
+    "design_mah": 6760.0,
+    "estimated_capacity_fraction": 0.529,
+    "cycle_count": 1087,
+    "temperature_celsius": 29.8,
+    "reported_health": "Good",
+    "measurement_limit": "Gauge estimate; no controlled discharge/capacity test. Current_now and charge_counter units/meaning are not used to infer consumption."
+  },
+  "storage": {
+    "data_total_kib": 11663624,
+    "data_free_kib": 7027228,
+    "system_superblock": {
+      "magic": "0xef53",
+      "filesystem_state_raw": 0,
+      "last_orphan_inode": 0,
+      "error_count": 0
+    },
+    "system_mounted_read_only": true,
+    "userdata_and_cache_clean_state": true,
+    "offline_fsck_performed": false,
+    "emmc_lifetime_counters_available": false
+  },
+  "memory": {
+    "memtotal_kib": 1863368,
+    "swap_total_kib": 520908,
+    "swap_used_kib": 2372,
+    "activity_manager_status_normal": true,
+    "accounting_caveat": "Legacy memory accounting reports negative Lost RAM; free memory numbers are approximate, not a hardware test."
+  },
+  "repairs": {
+    "all_expected_hashes_match": true,
+    "hashes": {
+      "/vendor/bin/sensors.qcom": "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+      "/system/lib/libbluetooth.so": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+      "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+      "/vendor/lib/hw/gps.msm8960.so": "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+      "/vendor/lib/hw/gps.msm8960.base.so": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+      "/vendor/lib/libgps.utils.so": "10c99e64ad4643e70377980fbc4debd36c41b91c7e6f835481ebd71f2d5ee77c",
+      "/system/etc/gps_debug.conf": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+      "/vendor/build.prop": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a"
+    }
+  },
+  "bluetooth": {
+    "enabled": true,
+    "reported_crashes_since_start": 0
+  },
+  "camera_devices_enumerated": 2,
+  "network_tests": [
+    "3 packets transmitted, 3 received, 0% packet loss, time 2003ms",
+    "1 packets transmitted, 1 received, 0% packet loss, time 0ms"
+  ],
+  "compatibility_gaps": {
+    "thermal_framework_hal_ready": false,
+    "legacy_thermald_running": true,
+    "kernel_thermal_limits_present": true,
+    "deviceconfig_denied_events_in_capture": 12,
+    "deviceconfig_permission": "android.permission.WRITE_DEVICE_CONFIG",
+    "permission_protection": "signature|verifier|configurator",
+    "permissions_changed": false
+  },
+  "browser": {
+    "active_webview": "com.google.android.webview 156.0.8078.47",
+    "bundled_unused_webview": "com.android.webview 100.0.4896.127",
+    "chrome": "157.0.8103.48",
+    "youtube": "21.44.534"
+  },
+  "security_context": {
+    "selinux": "Permissive",
+    "adb_enabled": true,
+    "userdata_encrypted": false,
+    "left_as_requested": true
+  },
+  "limitations": [
+    "Short audit after a recent reboot; not long-term stability certification.",
+    "No offline fsck, destructive RAM/storage test or full discharge test.",
+    "No new physical touchscreen, camera capture, microphone, GNSS sky or headset test.",
+    "USB connection and the audit itself affect power and CPU measurements.",
+    "No eMMC health grading from unavailable lifetime counters."
+  ]
+}
