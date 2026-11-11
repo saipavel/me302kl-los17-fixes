@@ -15,6 +15,7 @@
 - [Общий read-only аудит: стабильность, system filesystem, батарея и оставшиеся программные пробелы](docs/full-health-2026-11-11.md)
 - [Offline check system: ошибок структуры нет, метка clean восстановлена и проверена после загрузки](docs/system-fsck-2026-11-11.md)
 - [Google DeviceConfig: исправлено назначение configurator; thermal-эксперимент отменён после неудачной загрузки](docs/software-gaps-2026-11-11.md)
+- [Thermal: startup race воспроизведён на исходном ядре, source-кандидат проверен на ПК и не установлен](docs/thermal-followup-2026-11-11.md)
 - [Дельта обновления датчиков v1 → v2 и вариант от исходной ROM](patches/2026-11-11.json)
 - [Воспроизведение патчей и узкий откат](docs/patching-and-rollback.md)
 - [Точные хеши и небольшие бинарные дельты](patches/2026-11-10.json)

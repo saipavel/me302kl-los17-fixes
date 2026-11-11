@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-11",
+  "scope": "Read-only tablet investigation; host-only source patch and tests",
+  "tablet_changed": false,
+  "tablet_rebooted": false,
+  "candidate_installed": false,
+  "full_kernel_built": false,
+  "kernel_source_commit": "c1ec835b37a8ef39232cee7c4199d3b6b7196148",
+  "boot_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+  "live_boot_matches_preexisting_backup": true,
+  "original_kernel_emulation": {
+    "scenario": "Early tmdev initialized, sensor 7 thermal zone still NULL",
+    "fault": [
+      {
+        "pc": "0xc0761a68",
+        "address": "0x188",
+        "size": 4
+      }
+    ],
+    "matches_saved_crash": true
+  },
+  "source_patch_applies_cleanly": true,
+  "host_regression_scenarios_passed": 718,
+  "integration_and_hardware_tests_completed": false,
+  "thermal_reporting_available": false,
+  "original_thermald_running": true,
+  "verification": {
+    "boot_completed": true,
+    "system_state_after_android_boot": 1,
+    "error_count": 0,
+    "all_eight_repair_hashes_match": true,
+    "system_readonly": true,
+    "crash_buffer_empty": true,
+    "sensor_service": "running",
+    "cellular_disabled": "1",
+    "gps_power_control": "1",
+    "location_mode": "3",
+    "rotation_setting": "0",
+    "temporary_directory_empty": true
+  },
+  "source_files": {
+    "drivers/thermal/msm8960_tsens.c": "b1fb6d8022ebf0d9095ae587ac531b66460bc1cef7ccef6df9eda21dc49e1810",
+    "drivers/thermal/msm_thermal.c": "c161965a714c27166baa9595445251e34cc0c71a7493fe6042b991b9d85e5553",
+    "arch/arm/mach-msm/asustek/duma/board-duma.c": "557cb5ca9e0035261e8a154e3ec0a57e2da69b7dd9165b1cb36a9193627bfa9a"
+  }
+}

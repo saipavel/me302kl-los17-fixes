@@ -5,3 +5,5 @@
 *.S text eol=lf
 *.rc text eol=lf
 *.ps1 text eol=crlf
+# Unified diffs preserve upstream context whitespace and must remain LF.
+experiments/thermal-startup/*.patch text eol=lf whitespace=-blank-at-eol,-space-before-tab
