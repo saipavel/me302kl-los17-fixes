@@ -1,0 +1,110 @@
+ME302KL WORKING REPAIRS -- PRIVATE INSTALL BUNDLE, 2026-11-11
+
+Only for: LineageOS 17.1, 17.1-20230306-UNOFFICIAL-duma, Android 10.
+NOT for Android 13, other ROM dates, or other tablets. The installer refuses them.
+This is a Wi-Fi-only configuration: cellular phone/data services are disabled.
+The shared modem is retained for GPS. Location controls its GPS power adapter.
+
+Includes the tested sensor v2, Bluetooth microphone/HFP, GNSS NMEA crash repair,
+missing GPS libraries, GPS power adapter/configuration, Google configurator
+overlay, and the existing secure-video-decoder workaround. The latter hides an
+unusable secure decoder; it does not add DRM support. No thermal experiment,
+kernel replacement, apps, cache clearing or security update is included.
+
+The repaired owner's tablet already has these files. It does NOT need a reinstall.
+This package is for restoring the working repairs after reinstalling the SAME ROM.
+
+REQUIREMENTS
+Windows Python 3; Google platform-tools (adb); working USB; unlocked tablet;
+rooted debugging enabled; working TWRP recovery. Tested device has TWRP 3.1.0-1.
+Keep a full TWRP backup before changing another installation. This package backs
+up only the files/settings it changes, on the PC. It is not a full-device backup.
+Keep the PC backup until you no longer need rollback.
+
+Unzip the bundle into a new folder. Open PowerShell in that folder.
+Replace ADBPATH with the full path to adb.exe and SERIAL with `adb devices` output.
+Replace BACKUP with a NEW absolute PC directory, for example C:\TabletBackup\before-repairs.
+Use the SAME bundle, serial and backup directory for all steps.
+
+1. CHECK (Android running; no ROM/settings writes)
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL check
+
+If it reports 0 file/link changes, stop: the repairs are already installed.
+It checks file contents, not every setting or the physical operation of hardware.
+If it says unsupported ROM or unknown file version, stop; there is no force option.
+
+2. PREPARE A VERIFIED PC BACKUP (Android running)
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL --backup "BACKUP" prepare
+
+This saves the exact preceding file bytes, permissions/labels, links and targeted
+settings/package states. It does not modify the ROM. Do not change files/settings
+between prepare and installation. Do not use a backup from a different tablet.
+
+3. INSTALL IN RECOVERY (not through TWRP's Install ZIP button)
+
+& "ADBPATH" -s SERIAL reboot recovery
+
+In TWRP: Mount -> uncheck System. Do not select Wipe or Factory Reset.
+Keep USB connected. On the PC:
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL --backup "BACKUP" install
+
+The installer checks the exact system partition and offline ROM version, rechecks
+every file/dependency, writes only its listed system files, verifies bytes and
+metadata, unmounts system and checks its filesystem. It does not flash boot,
+recovery, radio, bootloader, EFS or userdata. It does not automatically reboot.
+
+If it reports an error, stay in TWRP and keep BACKUP. Do not wipe or flash unrelated
+firmware. The rollback command below accepts partially completed installations.
+
+4. COMPLETE SETTINGS IN ANDROID
+
+& "ADBPATH" -s SERIAL reboot
+
+Unlock Android; enable Rooted debugging again if required. Then:
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL --backup "BACKUP" configure
+& "ADBPATH" -s SERIAL reboot
+
+This enables HFP, applies the Wi-Fi-only/GPS properties and disables the three
+cellular packages if present. Location, airplane-mode on/off, Wi-Fi/Bluetooth
+toggles, rotation and installed user apps are not changed. Reboot is required for
+startup/profile changes. There is no always-running new helper process.
+
+5. VERIFY AFTER BOOT
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL check
+
+It should report 0 file/link changes. Test rotation, Bluetooth speech recording,
+Wi-Fi and GPS outdoors if you use them. The final check is not a hardware test.
+You can delete the unzipped bundle later; keep the PC backup for rollback.
+
+ROLLBACK (also works if Android does not start)
+
+Enter TWRP, uncheck System in Mount, keep USB connected. On this tablet recovery
+can be entered by holding Power + Volume Up until it restarts, then releasing.
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL --backup "BACKUP" rollback
+& "ADBPATH" -s SERIAL reboot
+
+When Android finishes starting, restore the targeted previous settings:
+
+python repair_bundle.py --adb "ADBPATH" --serial SERIAL --backup "BACKUP" restore-settings
+& "ADBPATH" -s SERIAL reboot
+
+Rollback restores the state from PREPARE, not necessarily an untouched factory
+ROM. If prepare was run on a partly repaired ROM, that is the state restored.
+If files were changed independently after installation, rollback stops rather
+than overwriting an unknown version. New empty overlay directories may remain.
+
+VALIDATION AND LIMITS
+The individual repairs were tested on the owner's tablet. The package's check
+was run against that tablet, and offline installer/rollback regression tests were
+run. The combined installer has not been flashed onto a second clean device.
+Do not mistake packaging validation for a new end-to-end hardware installation.
+
+This private ZIP contains vendor files extracted from the owner's repaired ROM.
+Do not upload it or PC backups to a public repository. Public build/installer
+source and findings are in github.com/saipavel/me302kl-los17-fixes.

@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-11",
+  "repository_commit": "0d991739f582b1240fa65c7777ab9ea5af8173bb",
+  "release_tag": "v1.0",
+  "release_published_at": "2026-10-31T09:35:19Z",
+  "asset_hashes": {
+    "system.img": {
+      "bytes": 1336934400,
+      "sha256": "589c4ff8fbe0610d8e908578b491c9d6516e5f279a6e80e3425c3ca803e09253"
+    },
+    "boot_a13_v9.img": {
+      "bytes": 7102464,
+      "sha256": "477c8725f089d3c1f39c05178e48c228b5fe9b416fc0ba9371044892f8003589"
+    },
+    "duma_firmware_a13.zip": {
+      "bytes": 7591571,
+      "sha256": "afdb49b959221c658b78d9c5f161482f37f94fa97a8880d8f7079ba9932fad15"
+    }
+  },
+  "extracted_files": {
+    "/system/build.prop": {
+      "bytes": 6388,
+      "sha256": "e8b5c5be7ccbbb4b936c5a20cd8abb3f0dafca7e5d4aab7361859eebe103ab50"
+    },
+    "/system/vendor/bin/sensors.qcom": {
+      "bytes": 220508,
+      "sha256": "9c0382d044af946ce755feaa7938e1a48c6773edc2ef8a6396a6443634b55f9b"
+    },
+    "/system/lib/libbluetooth.so": {
+      "absent": true
+    },
+    "/system/vendor/lib/hw/android.hardware.gnss@1.0-impl.so": {
+      "absent": true
+    },
+    "/system/vendor/lib/hw/gps.msm8960.so": {
+      "bytes": 19708,
+      "sha256": "4e60a8fbdc4bc2c3115f845d99c8b8142038937e4d5d0838ebf9d199327ab7bb"
+    },
+    "/system/vendor/lib/libgps.utils.so": {
+      "bytes": 20040,
+      "sha256": "b0b8beefb0e3b081b4c3914c8f9fe092103c7bf3be3ff6c954528149f08ac549"
+    },
+    "/system/etc/gps_debug.conf": {
+      "bytes": 1871,
+      "sha256": "1f902e124a4ea5e96f359736e2c8d359a72ca22e668fb8a35aeabffbeb452ce2"
+    },
+    "/system/vendor/build.prop": {
+      "bytes": 4411,
+      "sha256": "fba9b0fb41b44d4c3d472803a8c3d3353135b4f18cf18a3659cf9d65edbf229c"
+    },
+    "/system/vendor/etc/media_codecs.xml": {
+      "bytes": 4925,
+      "sha256": "4fddd234e696507d841d1659e4cf51dff273cd8976308f81536c3eec1debcd59"
+    },
+    "/system/vendor/etc/gps.conf": {
+      "absent": true
+    },
+    "/system/vendor/lib/libdiag.so": {
+      "bytes": 73020,
+      "sha256": "0a4ef218e4263cd2a92d0a6633de50a055df989755a3ef942365bc2cb424ada3"
+    },
+    "/system/vendor/lib/libsensor1.so": {
+      "bytes": 47064,
+      "sha256": "277399a1606b856cfc022fdb840298eb1760941cca29c163aaceddc39fa7f7a5"
+    },
+    "/system/vendor/lib/hw/sensors.msm8960.so": {
+      "bytes": 4776,
+      "sha256": "97810af515e7f1956bcbf0918da1309604ea24054cb74f31b30c7048465d2dbc"
+    },
+    "/system/framework/framework-res.apk": {
+      "bytes": 29724340,
+      "sha256": "488b71c026f8bbb37829807627d3c66c0e6b5675ae67bac27043b715075bc353"
+    },
+    "/system/vendor/lib/hw/android.hardware.gnss@1.0-impl.legacy.so": {
+      "bytes": 86720,
+      "sha256": "a7d95cd40dc08e180f66cab1454cf66278ecc7d7f6087d16099dcd9a3c9071d7"
+    },
+    "/system/apex/com.android.btservices/lib/libbluetooth_jni.so": {
+      "bytes": 10043128,
+      "sha256": "ba2a08353c6b628af5479c53056d0210f8468e9d1863f799123aa9ab0b712edc"
+    }
+  },
+  "sensor_daemon_matches_original_los17": true,
+  "libdiag_matches_los17": true,
+  "libsensor1_matches_los17": true,
+  "dsps_mdt_and_b00_match_los17_tablet": true,
+  "sensor_hal_differs": true,
+  "sensor_offline_patch_output_sha256": "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+  "android13_runtime_tested": false,
+  "combined_bundle_applicable": false,
+  "gnss_nmea_uses_setToExternal": {
+    "callback_call": "0xe952",
+    "plt_entry": "0x13b70",
+    "got_slot": "0x161f0",
+    "crash_reproduced_on_android13": false
+  },
+  "framework_configurator_resource": {
+    "id": "0x01040253",
+    "value": ""
+  }
+}
