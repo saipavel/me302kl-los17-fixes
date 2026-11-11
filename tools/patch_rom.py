@@ -36,14 +36,21 @@ def transform(data, spec, reverse=False):
 
 
 def main():
-    specs = json.loads(MANIFEST.read_text(encoding='utf-8'))['repairs']
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest', type=Path, default=MANIFEST,
+                        help='Exact-build repair manifest (default: 2026-11-10.json)')
     parser.add_argument('--list', action='store_true', help='List supported exact-build repairs')
     parser.add_argument('--reverse', action='store_true', help='Recover the original from a repaired file')
-    parser.add_argument('repair', nargs='?', choices=sorted(specs))
+    parser.add_argument('repair', nargs='?')
     parser.add_argument('input', nargs='?', type=Path)
     parser.add_argument('output', nargs='?', type=Path)
     args = parser.parse_args()
+    try:
+        specs = json.loads(args.manifest.read_text(encoding='utf-8'))['repairs']
+    except (OSError, ValueError, KeyError) as error:
+        parser.exit(1, 'Cannot read repair manifest: ' + str(error) + '\n')
+    if args.repair is not None and args.repair not in specs:
+        parser.error('Unknown repair; choose from: ' + ', '.join(sorted(specs)))
     if args.list:
         for key, spec in specs.items():
             print(key + ': ' + spec['device_path'])

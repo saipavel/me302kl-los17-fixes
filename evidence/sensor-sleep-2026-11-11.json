@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-11",
+  "rom": "lineage-17.1-20230306-UNOFFICIAL-duma",
+  "sensor_file_sha256_before": "92c61ca6d25e155e6da045195ea76292d4e2eb78c07c5db5ba9b8ceaa50d13cc",
+  "sensor_file_sha256_after": "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+  "arm_emulation": {
+    "arm_emulation_cases_passed": 316,
+    "log_ids_per_call": 52,
+    "verified": [
+      "bounds",
+      "64-bit mask",
+      "message header",
+      "timer cleanup",
+      "failure cleanup",
+      "stack alignment",
+      "register preservation",
+      "ASLR"
+    ]
+  },
+  "old_trace_log_type_62_packets": 79,
+  "old_trace_duration_seconds": 8,
+  "new_mask": "0xffffffffffffffff",
+  "new_mask_response_body_hex": "0202000000",
+  "new_trace_log_type_62_packets": 0,
+  "comparison": {
+    "v1": {
+      "elapsed_seconds": 355.64,
+      "monotonic_elapsed_seconds": 321.88,
+      "estimated_suspend_seconds": 33.76,
+      "wifi_state_after_usb_reconnection": [
+        "COMPLETED"
+      ],
+      "suspend_counters_before": "success: 0\nfail: 0\nfailed_freeze: 0\nfailed_prepare: 0\nfailed_suspend: 0\nfailed_suspend_late: 0\nfailed_suspend_noirq: 0\nfailed_resume: 0\nfailed_resume_early: 0\nfailed_resume_noirq: 0\nfailures:\n  last_failed_dev:\t\n\t\t\t\n  last_failed_errno:\t0\n\t\t\t0\n  last_failed_step:\t\n\t\t\t\n",
+      "suspend_counters_after": "success: 27\nfail: 5\nfailed_freeze: 4\nfailed_prepare: 0\nfailed_suspend: 1\nfailed_suspend_late: 0\nfailed_suspend_noirq: 0\nfailed_resume: 0\nfailed_resume_early: 0\nfailed_resume_noirq: 0\nfailures:\n  last_failed_dev:\t\n\t\t\t\n  last_failed_errno:\t-16\n\t\t\t-16\n  last_failed_step:\tfreeze\n\t\t\tsuspend\n",
+      "host_offload_error_count_current_kernel_ring": 0,
+      "traffic_results": {
+        "ping-after-unplug": "3 packets transmitted, 3 received, 0% packet loss, time 2003ms",
+        "dns-after-unplug": "1 packets transmitted, 1 received, 0% packet loss, time 0ms"
+      },
+      "sensor_wakelock_added_seconds": 280.067,
+      "sensor_irq_resume_count": 27
+    },
+    "v2": {
+      "elapsed_seconds": 420.46,
+      "monotonic_elapsed_seconds": 87.21,
+      "estimated_suspend_seconds": 333.25,
+      "wifi_state_after_usb_reconnection": [
+        "COMPLETED"
+      ],
+      "suspend_counters_before": "success: 0\nfail: 0\nfailed_freeze: 0\nfailed_prepare: 0\nfailed_suspend: 0\nfailed_suspend_late: 0\nfailed_suspend_noirq: 0\nfailed_resume: 0\nfailed_resume_early: 0\nfailed_resume_noirq: 0\nfailures:\n  last_failed_dev:\t\n\t\t\t\n  last_failed_errno:\t0\n\t\t\t0\n  last_failed_step:\t\n\t\t\t\n",
+      "suspend_counters_after": "success: 28\nfail: 2\nfailed_freeze: 2\nfailed_prepare: 0\nfailed_suspend: 0\nfailed_suspend_late: 0\nfailed_suspend_noirq: 0\nfailed_resume: 0\nfailed_resume_early: 0\nfailed_resume_noirq: 0\nfailures:\n  last_failed_dev:\t\n\t\t\t\n  last_failed_errno:\t-16\n\t\t\t-16\n  last_failed_step:\tfreeze\n\t\t\tfreeze\n",
+      "host_offload_error_count_current_kernel_ring": 0,
+      "traffic_results": {
+        "ping-after-unplug": "3 packets transmitted, 3 received, 0% packet loss, time 2002ms",
+        "dns-after-unplug": "1 packets transmitted, 1 received, 0% packet loss, time 0ms"
+      },
+      "sensor_wakelock_added_seconds": 3.138,
+      "sensor_irq_resume_count": 0
+    }
+  },
+  "functional_checks": {
+    "fresh_accelerometer_verified": true,
+    "rotation_setting_restored": true,
+    "crash_buffer_empty": true,
+    "sensor_pid": "349"
+  },
+  "limitations": [
+    "One tablet; one unplugged comparison per version.",
+    "Intervals include USB/human preparation and differ in length.",
+    "Battery-life percentage has not been measured.",
+    "Manual Wi-Fi reconnection was used after reboot; boot autojoin not established."
+  ]
+}
