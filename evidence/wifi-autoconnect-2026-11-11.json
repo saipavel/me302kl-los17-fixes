@@ -1,0 +1,172 @@
+{
+  "automatically_connected": true,
+  "same_network_as_before": true,
+  "same_access_point_as_before": true,
+  "first_confirmed_connection": {
+    "seconds_since_reboot_request": 237.9,
+    "device_uptime_seconds": 220.11,
+    "boot_completed": true,
+    "wifi_state": "COMPLETED"
+  },
+  "manual_wifi_action_used": false,
+  "ping-after": "3 packets transmitted, 3 received, 0% packet loss, time 2002ms",
+  "dns-after": "1 packets transmitted, 1 received, 0% packet loss, time 0ms",
+  "observations": [
+    {
+      "seconds_since_reboot_request": 28.1,
+      "device_uptime_seconds": 10.37,
+      "boot_completed": false,
+      "wifi_state": "not-ready"
+    },
+    {
+      "seconds_since_reboot_request": 36.5,
+      "device_uptime_seconds": 18.89,
+      "boot_completed": false,
+      "wifi_state": "not-ready"
+    },
+    {
+      "seconds_since_reboot_request": 44.9,
+      "device_uptime_seconds": 27.28,
+      "boot_completed": false,
+      "wifi_state": "UNINITIALIZED"
+    },
+    {
+      "seconds_since_reboot_request": 53.3,
+      "device_uptime_seconds": 35.7,
+      "boot_completed": false,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 62.0,
+      "device_uptime_seconds": 44.04,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 71.0,
+      "device_uptime_seconds": 52.89,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 80.0,
+      "device_uptime_seconds": 61.79,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 90.2,
+      "device_uptime_seconds": 71.44,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 99.3,
+      "device_uptime_seconds": 81.07,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 107.9,
+      "device_uptime_seconds": 89.99,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 116.5,
+      "device_uptime_seconds": 98.67,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 125.2,
+      "device_uptime_seconds": 107.26,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 133.9,
+      "device_uptime_seconds": 115.97,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 142.5,
+      "device_uptime_seconds": 124.61,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 151.2,
+      "device_uptime_seconds": 133.3,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 159.8,
+      "device_uptime_seconds": 141.97,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 168.5,
+      "device_uptime_seconds": 150.6,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 177.2,
+      "device_uptime_seconds": 159.29,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 185.8,
+      "device_uptime_seconds": 167.98,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 194.5,
+      "device_uptime_seconds": 176.62,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 203.2,
+      "device_uptime_seconds": 185.32,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 212.0,
+      "device_uptime_seconds": 194.03,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 220.7,
+      "device_uptime_seconds": 202.8,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 229.4,
+      "device_uptime_seconds": 211.53,
+      "boot_completed": true,
+      "wifi_state": "DISCONNECTED"
+    },
+    {
+      "seconds_since_reboot_request": 237.9,
+      "device_uptime_seconds": 220.11,
+      "boot_completed": true,
+      "wifi_state": "COMPLETED"
+    }
+  ],
+  "screen_wake_test_action": {
+    "device_uptime_before_wake": "192.82",
+    "action": "KEYCODE_WAKEUP and dismiss swipe keyguard; no Wi-Fi settings or network selection"
+  },
+  "qualification": "Screen wake/unlock was performed before connection. Prompt autojoin with screen left untouched is not established by this test.",
+  "new_rom_patch_installed": false
+}
