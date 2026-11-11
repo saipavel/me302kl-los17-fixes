@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.me302kl.fixes.configurator" android:versionCode="1" android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29" />
+    <overlay android:targetPackage="android" android:isStatic="true" android:priority="999" />
+    <application android:hasCode="false" android:label="ME302KL device configurator" />
+</manifest>

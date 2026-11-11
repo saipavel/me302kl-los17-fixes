@@ -1,0 +1,4 @@
+<resources>
+    <!-- Android 10 grants configurator-protected permissions to this package. -->
+    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
+</resources>

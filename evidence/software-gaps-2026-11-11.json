@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-11",
+  "gms_overlay": {
+    "device_path": "/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk",
+    "sha256": "105fa4a3ac1a1d407c23f3f248aca4a1b318039bc20d3ca3a50e3c9422cd88f9",
+    "bytes": 3478,
+    "has_code": false,
+    "thermal_candidates_absent": true,
+    "filesystem_clean": true
+  },
+  "postboot": {
+    "boot_completed": true,
+    "thermal_hal_ready": false,
+    "thermal_service_state": "",
+    "legacy_thermald_state": "running",
+    "gms_deviceconfig_permission_granted": true,
+    "config_probe": "config_deviceConfiguratorPackageName resource=104016b value=com.google.android.gms\nconfig_deviceWellbeingPackage resource=0 value=<not-defined>\nconfig_defaultPermissionGrantPolicyPackage resource=0 value=<not-defined>\nGMS WRITE_DEVICE_CONFIG check=0",
+    "crash_buffer_empty": true,
+    "deviceconfig_denial_events": 0
+  },
+  "verification": {
+    "boot_completed": true,
+    "system_state_after_android_boot": 1,
+    "error_count": 0,
+    "all_eight_repair_hashes_match": true,
+    "system_readonly": true,
+    "crash_buffer_empty": true,
+    "sensor_service": "running",
+    "cellular_disabled": "1",
+    "gps_power_control": "1",
+    "location_mode": "3",
+    "rotation_setting": "0",
+    "temporary_directory_empty": true
+  },
+  "failed_combined_boot": {
+    "fault": "NULL pointer in tsens_tz_set_trip_temp+0xc/0x248",
+    "uptime_seconds": 5.205,
+    "context": "kworker/1:1, check_temp work item",
+    "exact_cause_isolated": false,
+    "thermal_candidate_removed": true
+  },
+  "original_thermal_components_and_framework_hashes_match": true,
+  "temporary_tests_removed": true
+}
