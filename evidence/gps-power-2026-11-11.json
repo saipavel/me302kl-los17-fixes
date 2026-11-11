@@ -42,5 +42,15 @@
     "bluetooth_on": "1"
   },
   "location_toggle_round_trips_observed": 2,
-  "outdoor_fix_after_adapter_installation_confirmed": false
+  "outdoor_fix_after_adapter_installation_confirmed": null,
+  "location_fix_after_adapter_installation": {
+    "confirmed": true,
+    "source": "owner report in conversation",
+    "date": "2026-11-11",
+    "report": "ok, tested, got location fix.",
+    "environment": null,
+    "time_to_fix_seconds": null,
+    "accuracy_metres": null,
+    "new_raw_capture": false
+  }
 }
