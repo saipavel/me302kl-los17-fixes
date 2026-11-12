@@ -1,0 +1,13 @@
+{
+  "official_visible_to_ueventd": true,
+  "official_probe_output": "CREATE_OK OMX.qcom.video.decoder.avc.secure\r\nRELEASE_OK\r\n",
+  "official_probe_exit": 0,
+  "original_files_restored": true,
+  "normal_avc_after_restore": "CREATE_OK; RELEASE_OK",
+  "pil_vidc_refcount_after_tests": "0",
+  "crash_buffer_empty": true,
+  "test_mounts_remaining": "",
+  "scratch_listing": "",
+  "wifi_validated": true,
+  "codec_xml_sha256": "61b54df613f6a0b8a4084562a0583067e12ba6a714868e44e72fc0f79c7f22e9"
+}
