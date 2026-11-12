@@ -30,9 +30,23 @@
     "pipe_callbacks_per_fixed_run": 2,
     "clean_thread_join": true,
     "original_reproduced_assert_and_sigabrt": true,
-    "live_wifi_toggle_validation": "pending owner unlock/network connection",
+    "live_wifi_toggle_validation": {
+      "baseline_connected_and_internet_validated": true,
+      "completed_cycles": 1,
+      "planned_remaining_cycles_cancelled": 2,
+      "first_reconnect_validated": false,
+      "first_cycle_wait_seconds": 56.7,
+      "system_server_unchanged": true,
+      "new_anr": false,
+      "new_native_crash": false,
+      "kernel_log": "WDI_NV_DOWNLOAD_RESP timeout; Prima init failure; automatic WCNSS subsystem restart",
+      "recovery": "Separate retry of Wi-Fi enable restored connected/validated network",
+      "complete_wifi_toggle_fix_proven": false,
+      "prevention_of_previous_crash_demonstrated_by_this_test": false
+    },
     "sleep_phase_A": "invalidated by user Wi-Fi change and framework crash",
-    "complete_wifi_hal_fix_proven": false
+    "complete_wifi_hal_fix_proven": false,
+    "new_sleep_comparison": "Fresh Location ON/OFF comparison prepared, same Wi-Fi ON and Bluetooth OFF; awaiting first unplugged return"
   },
   "private_bundle": {
     "name": "ME302KL-LOS17.1-working-repairs-2026-11-12.zip",
