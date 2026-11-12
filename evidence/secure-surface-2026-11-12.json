@@ -1,0 +1,24 @@
+{
+  "status": "investigation_only_originals_restored",
+  "compositor_probe": {
+    "official_visible_to_ueventd": true,
+    "official_probe_output": "COMPOSITOR_SURFACE_OK\r\nCREATE_OK ms=20282\r\nCONFIGURE_OK\r\nSTAGE_FAILED android.media.MediaCodec$CodecException: start failed\r\nRELEASE_OK ms=40604\r\n",
+    "official_probe_exit": 0,
+    "original_files_restored": true
+  },
+  "widevine": {
+    "supported": true,
+    "vendor": "Google",
+    "version": "1.0",
+    "securityLevel": "L3",
+    "session": "NotProvisionedException",
+    "provisioning_attempted": false
+  },
+  "output_failure": "ION allocation in vdec_alloc_meta_buffers, errno 12; first output GraphicBuffer registration fails",
+  "mfc_heap_live_bytes": 8192,
+  "mfc_heap_current_static_bytes": 8192,
+  "mfc_heap_official_static_bytes": 8192,
+  "official_omx_sha256": "ba1d5387e3285a1befd8983244d9ac47d998abdfc9ef956dc7f4b3ac49cd7a01",
+  "official_allocator_observation": "No exported vdec_alloc_meta_buffers; inspected allocator uses secure MM mask 0x100, unlike installed metadata branch using MFC mask 0x1000",
+  "limitation": "No decoded frame, DRM licence, provisioning or protected presentation tested. Allocation size not instrumented; heap exhaustion root cause not fully isolated."
+}

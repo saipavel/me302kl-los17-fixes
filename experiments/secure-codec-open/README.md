@@ -1,5 +1,7 @@
 # One-shot MediaCodec lifecycle probe
 
+Latest: [SurfaceControl output and Widevine capability investigation](../../docs/secure-surface-2026-11-12.md). `CodecSurfaceProbe.java` replaces the unsuitable SurfaceTexture with a compositor-owned secure surface. No frames are queued. `DrmCapabilityProbe.java` reads capabilities and attempts a session without provisioning or licence acquisition; it does not print unique device IDs.
+
 Follow-up: [secure input-port patch and limitations](../../docs/secure-buffer-port-2026-11-12.md). `CodecStageProbe.java` extends the test through configure/start/stop using a detached SurfaceTexture. That consumer cannot display protected buffers: a start failure there is not proof of a tablet display defect. This helper catches exceptions, so exit 0 alone never means success; inspect every stage and service crash logs. `patch_input_port.py` builds a hash-locked experimental vendor patch offline; it does not install anything.
 
 The Java helper opens a component by exact name and releases it. Compile with javac targeting Java 8, convert with D8 for API 29, and run the resulting dex using Android app_process with CLASSPATH. Reflection avoids requiring an Android SDK stub jar. No APK installation is needed.
