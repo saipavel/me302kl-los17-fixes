@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-12",
+  "timezone": "Europe/Sofia",
+  "initial_uptime_seconds": 75702.95,
+  "rom": "17.1-20230306-UNOFFICIAL-duma",
+  "permanent_rom_or_settings_changes": false,
+  "rebooted_by_audit": false,
+  "all_nine_repair_hashes_match": true,
+  "repair_hashes": {
+    "/vendor/bin/sensors.qcom": "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+    "/system/lib/libbluetooth.so": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+    "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+    "/vendor/lib/hw/gps.msm8960.so": "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+    "/vendor/lib/hw/gps.msm8960.base.so": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+    "/vendor/lib/libgps.utils.so": "10c99e64ad4643e70377980fbc4debd36c41b91c7e6f835481ebd71f2d5ee77c",
+    "/system/etc/gps_debug.conf": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+    "/vendor/build.prop": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
+    "/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk": "105fa4a3ac1a1d407c23f3f248aca4a1b318039bc20d3ca3a50e3c9422cd88f9"
+  },
+  "system_superblock": {
+    "state": 1,
+    "error_count": 0
+  },
+  "baseline_crash_buffer_empty": true,
+  "anr_since_boot_reported": false,
+  "bluetooth": {
+    "manager_crash_count": 1,
+    "last_crash_local": "2026-11-12 06:43:27",
+    "auto_restart_local": "2026-11-12 06:43:28",
+    "manually_disabled_local": "2026-11-12 07:21:28",
+    "new_crash_pid": 667,
+    "matching_new_stack_trace_found": false,
+    "older_imported_tombstone_pid": 680,
+    "older_tombstone_timestamp": "2026-11-11 12:05:31+0200",
+    "older_tombstone_not_attributed_to_new_restart": true
+  },
+  "battery": {
+    "level_at_initial_snapshot": 75,
+    "charging": true,
+    "temperature_celsius": 24.0,
+    "gauge_full_charge_mah": 3691,
+    "design_mah": 6760,
+    "gauge_capacity_fraction": 0.5460059171597633,
+    "cycles": 1087,
+    "battery_stats_window_realtime_seconds": 60211.68,
+    "battery_stats_window_uptime_seconds": 4197.561,
+    "screen_on_seconds": 1057.695,
+    "screen_off_realtime_seconds": 59153.985,
+    "screen_off_uptime_seconds": 3139.867,
+    "sensorservice_kernel_wakelock_ms": 88,
+    "dsp_async_wakelock_seconds": 395.286,
+    "dsp_async_wakelock_events": 86937,
+    "power_model_not_calibrated": true,
+    "controlled_discharge_or_AB_test": false
+  },
+  "memory": {
+    "status": "normal",
+    "swap_used_kib": 77108,
+    "zram_physical_used_kib": 25040,
+    "cpu_samples": [
+      {
+        "interval_seconds": 5.36,
+        "cpu_busy_share": 0.001,
+        "system_server_ticks": 113,
+        "vm_deltas": {
+          "pswpin": 0,
+          "pswpout": 0,
+          "pgmajfault": 0
+        },
+        "aggregate_counter_delta_ticks": 164811,
+        "valid_aggregate_interval": false
+      },
+      {
+        "interval_seconds": 5.41,
+        "cpu_busy_share": 0.125,
+        "system_server_ticks": 10,
+        "vm_deltas": {
+          "pswpin": 0,
+          "pswpout": 0,
+          "pgmajfault": 0
+        },
+        "aggregate_counter_delta_ticks": 527,
+        "valid_aggregate_interval": true
+      },
+      {
+        "interval_seconds": 5.33,
+        "cpu_busy_share": 0.106,
+        "system_server_ticks": 6,
+        "vm_deltas": {
+          "pswpin": 0,
+          "pswpout": 0,
+          "pgmajfault": 0
+        },
+        "aggregate_counter_delta_ticks": 521,
+        "valid_aggregate_interval": true
+      }
+    ]
+  },
+  "optimization": {
+    "animation_scales": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "current_governor": "zzmoove",
+    "listed_governors": [
+      "elementalx",
+      "conservative",
+      "ondemand",
+      "powersave",
+      "performance"
+    ],
+    "governor_mismatch_unresolved": true,
+    "apps_already_ART_compiled": true,
+    "performance_gain_measured": false,
+    "launcher_gfx_sample_frames": 62,
+    "launcher_janky_frames": 53,
+    "launcher_sample_not_generalized_to_all_usage": true
+  },
+  "hdmi": {
+    "physical_test_performed": false,
+    "historical_crash_reported_by_owner": true,
+    "kernel_fb1_present": true,
+    "fb1_type": "dtv panel",
+    "connected": 0,
+    "hpd_enabled": 1,
+    "switch_state": 0,
+    "irq_present": true,
+    "hwc_adapter": "HWC2On1Adapter over HWC1.4",
+    "hwcomposer_sha256": "4b8cf235cd4aae95a050d7c0611b4486d6dc2adbe120db5f5d8154e158bd92ab",
+    "known_good_cable_and_sink_needed": true
+  },
+  "media": {
+    "normal_hardware_avc_decoder_present": true,
+    "software_avc_decoder_present": true,
+    "secure_decoder_left_disabled": true,
+    "widevine_supported": true,
+    "widevine_vendor": "Google",
+    "widevine_version": "1.0",
+    "widevine_security_level": "L3",
+    "DRM_session_or_license_request_opened": false,
+    "secure_firmware_test_performed": false,
+    "stock_reference": "JP_epad-10.10.3.41-20140207 Android 4.2.2",
+    "firmware_comparison": {
+      "vidc.mdt": {
+        "stock_JP_4_2_2": "12c117480a0643e53d76c95ee73851217fd85689f3fe43bc69e168c7d0711d73",
+        "vendor_SevenMaxs_reference": "5b5568794e7210795216f220aa7a0b4a1623f8484460fc55780fa38b37437701",
+        "same": false
+      },
+      "vidc.b00": {
+        "stock_JP_4_2_2": "87b393d31edbaf4aecb26021aa3298f35248da54154d54ef4565910193c4df99",
+        "vendor_SevenMaxs_reference": "87b393d31edbaf4aecb26021aa3298f35248da54154d54ef4565910193c4df99",
+        "same": true
+      },
+      "vidc.b01": {
+        "stock_JP_4_2_2": "2f0863b44188d0f391cc6c0281b97b57f9c781e4f7938439aff617de75084f76",
+        "vendor_SevenMaxs_reference": "2361f37d533174a8ae5f4b0bd5470119e3b9e48f93b22760b0b44ed37db1bdd6",
+        "same": false
+      },
+      "vidc.b02": {
+        "stock_JP_4_2_2": "5307158ee99e36512003bc130698e9cca19c5ec4c441099147974c6afc1683cf",
+        "vendor_SevenMaxs_reference": "9e14deab4a61a9737f891a194519350a6c09b4bdd0a93cbabab74c449b803b20",
+        "same": false
+      },
+      "vidc.b03": {
+        "stock_JP_4_2_2": "46cdd6a327dddfabd09d262c034fe962aa34bdf91ac4699e6e82bedbd463ec67",
+        "vendor_SevenMaxs_reference": "85abd019ba36c10926d96d74e189d2429b1bdad6bc374bd51e8219982656e13e",
+        "same": false
+      },
+      "vidc_1080p.fw": {
+        "stock_JP_4_2_2": "948b711eeb8220a6c2f3e5c1ae1b809b5edcbb5ba766cc38602c9c5d8b6904a5",
+        "vendor_SevenMaxs_reference": "a51a6e00d48314f03c813850e22236062dc2239be1476e8288c478468f424727",
+        "same": false
+      },
+      "vidcfw.elf": {
+        "stock_JP_4_2_2": "83cdc1e14c5457d51003b92cc8993997e111bd06f267b10b157f468c6f67555a",
+        "vendor_SevenMaxs_reference": "936eb7c1eed763226642bcbb9cb37d997a35ba21cdede225f254503bc15d9472",
+        "same": false
+      }
+    }
+  },
+  "diagnostic_footprint": {
+    "temporary_DEX_removed": true,
+    "own_probe_initial_context_error": true,
+    "own_probe_Looper_exception_logged": true,
+    "own_probe_final_exit": 0,
+    "probe_failure_excluded_from_preceding_day_assessment": true,
+    "logs_not_cleared": true
+  }
+}
