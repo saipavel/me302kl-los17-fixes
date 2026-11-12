@@ -1,0 +1,48 @@
+{
+  "original_boot_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+  "kernel_base": 3221258240,
+  "edits": [
+    {
+      "address": 3231100212,
+      "offset": 9841972,
+      "before_hex": "dc409fe5",
+      "after_hex": "dc609fe5",
+      "assembly": "ldr r6, [pc, #0xdc]"
+    },
+    {
+      "address": 3231100228,
+      "offset": 9841988,
+      "before_hex": "04408fe0",
+      "after_hex": "06608fe0",
+      "assembly": "add r6, pc, r6"
+    },
+    {
+      "address": 3231100232,
+      "offset": 9841992,
+      "before_hex": "244084e2",
+      "after_hex": "246086e2",
+      "assembly": "add r6, r6, #0x24"
+    },
+    {
+      "address": 3231100240,
+      "offset": 9842000,
+      "before_hex": "0430a0e1",
+      "after_hex": "0630a0e1",
+      "assembly": "mov r3, r6"
+    },
+    {
+      "address": 3231100252,
+      "offset": 9842012,
+      "before_hex": "0410a0e1",
+      "after_hex": "0610a0e1",
+      "assembly": "mov r1, r6"
+    },
+    {
+      "address": 3231100172,
+      "offset": 9841932,
+      "before_hex": "230000ea",
+      "after_hex": "a0ffffea",
+      "assembly": "b 0xc096ab94"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-12",
+  "rom": "17.1-20230306-UNOFFICIAL-duma",
+  "installed": true,
+  "boot_sha256": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+  "original_boot_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+  "boot_bytes": 16777216,
+  "xz_stream_bytes": 5897588,
+  "uncompressed_kernel_bytes": 20556680,
+  "kernel_instructions_changed": 6,
+  "pno_experiment_included": false,
+  "emulation": {
+    "executions": 128,
+    "contexts": 16,
+    "error_paths_complete_correct_context": true,
+    "normal_exit_and_null_argument_preserved": true,
+    "all_diagnostic_call_arguments_preserved": true,
+    "r7_not_assumed_to_hold_context": true,
+    "kernel_scheduling_not_emulated": true
+  },
+  "recovery_install": {
+    "action": "candidate",
+    "recovery": "3.1.0-1 SevenMaxs",
+    "block": "/dev/block/mmcblk0p14",
+    "bytes": 16777216,
+    "before_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+    "after_sha256": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+    "readback_verified": true,
+    "other_partitions_written": false
+  },
+  "real_fault": {
+    "nv_download_timeout_observed": true,
+    "failed_watchdog_reset_observed": true,
+    "hal_released_from_close_wait": true,
+    "all_observed_hal_threads_watchdog_close_wait_count": 0,
+    "recovered_after_one_explicit_retry": true,
+    "kernel_or_framework_reboot_during_test": false,
+    "initial_nv_download_error_fixed": false,
+    "screen_off_network_discovery_fixed": false
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "first_validated_wait_seconds": null,
+      "retry_validated_wait_seconds": 23.48,
+      "hal_wait_after_first_failure": "binder_thread_read",
+      "elapsed_seconds": 99.16,
+      "internet_restored": true,
+      "display_state": "ON"
+    },
+    {
+      "cycle": 2,
+      "first_validated_wait_seconds": 23.44,
+      "retry_validated_wait_seconds": null,
+      "elapsed_seconds": 24.61,
+      "internet_restored": true,
+      "display_state": "ON"
+    },
+    {
+      "cycle": 3,
+      "first_validated_wait_seconds": 23.19,
+      "retry_validated_wait_seconds": null,
+      "elapsed_seconds": 24.41,
+      "internet_restored": true,
+      "display_state": "ON"
+    }
+  ],
+  "final": {
+    "wifi_connected_and_internet_validated": true,
+    "location": "on",
+    "bluetooth": "off",
+    "original_stay_awake_setting_restored": true,
+    "previous_system_repairs_hash_check_changes_needed": 0,
+    "new_anr": false,
+    "new_native_crash": false,
+    "extra_resident_service": false,
+    "rooted_debugging_retained": true
+  },
+  "limitations": [
+    "Only one actual failed-reset recovery tested",
+    "Long-duration sleep/battery not tested with this kernel",
+    "Other kernels and Android 13 unsupported",
+    "System-file repair ZIP excludes this separate boot image"
+  ]
+}
