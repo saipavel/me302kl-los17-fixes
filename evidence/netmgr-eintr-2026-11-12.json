@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-12",
+  "device": "ASUS ME302KL / duma",
+  "rom": "17.1-20230306-UNOFFICIAL-duma",
+  "user_wifi_crash": {
+    "time": "09:44:24 EET",
+    "kernel_reboot": false,
+    "process": "system_server",
+    "signal": "SIGABRT",
+    "library": "/vendor/lib/libnetmgr.so",
+    "abort_callsite": "0x2b9b",
+    "negative_select_confirmed": true,
+    "historical_errno_known": false,
+    "preceding_systemui_anr": true
+  },
+  "repair": {
+    "installed": true,
+    "sha256": "b0e7c0f6932f4829c83bdc0719ae67dd7d50386b75dda41b43272c00d8a3528f",
+    "bytes": 42492,
+    "behaviour": "Retry select only for EINTR; preserve original handling of other errors",
+    "extra_service": false,
+    "framework_restart": true,
+    "kernel_reboot": false,
+    "filesystem_clean_after_remount_ro": true
+  },
+  "validation": {
+    "emulation_cases": 140,
+    "on_device_isolated_fixed_runs_passed": 2,
+    "signals_per_fixed_run": 20,
+    "pipe_callbacks_per_fixed_run": 2,
+    "clean_thread_join": true,
+    "original_reproduced_assert_and_sigabrt": true,
+    "live_wifi_toggle_validation": "pending owner unlock/network connection",
+    "sleep_phase_A": "invalidated by user Wi-Fi change and framework crash",
+    "complete_wifi_hal_fix_proven": false
+  },
+  "private_bundle": {
+    "name": "ME302KL-LOS17.1-working-repairs-2026-11-12.zip",
+    "sha256": "5ed9cc87d639bd200427b14c5655c56a2a01169447c3f522e26f5b456462f96f",
+    "bytes": 2230665,
+    "file_count": 12,
+    "symlink_count": 1,
+    "device_check_changes_needed": 0,
+    "host_transaction_tests_passed": 6,
+    "second_clean_device_install_tested": false
+  }
+}

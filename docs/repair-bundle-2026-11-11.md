@@ -2,7 +2,7 @@
 
 Подготовлен по просьбе владельца **для всех рабочих ремонтов**, без экспериментального thermal startup patch. Это ZIP для распаковки на ПК и запуска Python/ADB, **не flashable ZIP для кнопки Install в TWRP** и не полная ROM. Полная установка выполняется через ADB в recovery; отдельный шаг Android применяет настройки.
 
-Целевая сборка: `17.1-20230306-UNOFFICIAL-duma`, Android 10. Формат включает 11 файлов и GPS config symlink. Нужна Wi-Fi-only конфигурация: телефония и mobile data отключаются, общий модем сохраняется для GPS. Для использования SIM этот набор не предназначен.
+Целевая сборка: `17.1-20230306-UNOFFICIAL-duma`, Android 10. Версия от 12 ноября включает 12 файлов и GPS config symlink; предыдущая версия содержала 11 файлов. Нужна Wi-Fi-only конфигурация: телефония и mobile data отключаются, общий модем сохраняется для GPS. Для использования SIM этот набор не предназначен.
 
 ## Содержимое
 
@@ -11,6 +11,7 @@
 - GNSS NMEA ownership repair, восстановленные legacy GPS libraries и адаптер питания через Location.
 - GPS assistance configuration и cellular-disabled init/build.prop.
 - Google configurator resource overlay.
+- [Netmgr: повтор ожидания после EINTR вместо аварийной остановки Android](netmgr-eintr-2026-11-12.md), добавлено 12 ноября. Не означает исправления всех зависаний Wi-Fi HAL.
 - Существующий на планшете codec workaround от 6 ноября: скрыт неработающий secure AVC decoder. Это обход, не ремонт DRM или TrustZone.
 
 Не включены kernel/thermal experiments, приложения, чистка кешей, обновления Android/WebView, firmware радио/bootloader/EFS или изменения пользовательских файлов. Wi-Fi autojoin не объявляется исправленным этим комплектом; sensor v2 уменьшает известные sensor wake-ups.

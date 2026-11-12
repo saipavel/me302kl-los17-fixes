@@ -34,6 +34,7 @@ TARGETS={
     '/vendor/etc/init/me302kl-cellular-disabled.rc':(0,0,'644','vendor_configs_file'),
     '/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk':(0,0,'644','vendor_overlay_file'),
     '/vendor/etc/media_codecs.xml':(0,0,'644','vendor_configs_file'),
+    '/vendor/lib/libnetmgr.so':(0,0,'644','vendor_file'),
 }
 GLOBALS=['bluetooth_disabled_profiles','mobile_data','data_roaming','airplane_mode_radios']
 PROPS=['persist.me302kl.cellular_disabled','persist.me302kl.gps_power_control']
@@ -125,7 +126,10 @@ def build(device,repo,output):
         '/vendor/etc/init/me302kl-cellular-disabled.rc':'184e63aefe14815179372157ceb0865005f3768c1435acc16025a804637ffeee',
         '/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk':'105fa4a3ac1a1d407c23f3f248aca4a1b318039bc20d3ca3a50e3c9422cd88f9',
         '/vendor/etc/media_codecs.xml':'61b54df613f6a0b8a4084562a0583067e12ba6a714868e44e72fc0f79c7f22e9'})
+    netmgr=load(repo/'patches/2026-11-12-netmgr.json')['repairs']['netmgr-eintr']
+    expected[netmgr['device_path']]=netmgr['after_sha256']
     allowed={p:[h] for p,h in expected.items()}
+    allowed[netmgr['device_path']].append(netmgr['before_sha256'])
     for spec in m10.values():allowed[spec['device_path']].append(spec['before_sha256'])
     allowed['/vendor/bin/sensors.qcom'].append(m11['sensors-logmask-v2']['before_sha256'])
     for path in ['/vendor/lib/hw/gps.msm8960.so','/vendor/lib/hw/gps.msm8960.base.so','/vendor/lib/libgps.utils.so','/vendor/etc/init/me302kl-cellular-disabled.rc','/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk']:

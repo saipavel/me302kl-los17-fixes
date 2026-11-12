@@ -29,6 +29,7 @@ deps={path:('synthetic '+path).encode() for path in m['dependencies']}
 m['dependencies']={path:b.sha(data) for path,data in deps.items()}
 original={};states={}
 specs=b.load(repo/'patches/2026-11-10.json')['repairs']
+specs.update(b.load(repo/'patches/2026-11-12-netmgr.json')['repairs'])
 v2=b.load(repo/'patches/2026-11-11.json')['repairs']['sensors-v2-from-original']
 for path,spec in m['files'].items():
     payload=(a.bundle/'payload'/spec['payload']).read_bytes()
@@ -109,7 +110,7 @@ def setup(name):
 d,backup=setup('roundtrip')
 before=copy.deepcopy(d.values)
 b.install(d,m,a.bundle,backup)
-assert len(d.writes)==12 and not b.check_files(d,m)[0]
+assert len(d.writes)==len(b.TARGETS)+1 and not b.check_files(d,m)[0]
 b.configure(d,m,backup)
 assert d.values['globals']['bluetooth_disabled_profiles']=='0'
 assert all(v=='1' for v in d.values['properties'].values())

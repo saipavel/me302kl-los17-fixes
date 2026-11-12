@@ -1,0 +1,29 @@
+{
+  "rom": "lineage-17.1-20230306-UNOFFICIAL-duma",
+  "repairs": {
+    "netmgr-eintr": {
+      "device_path": "/vendor/lib/libnetmgr.so",
+      "before_bytes": 42492,
+      "after_bytes": 42492,
+      "before_sha256": "f74b5603007fa892389560ea381588684ed6d0b9cb9032d9098203e7f337b928",
+      "after_sha256": "b0e7c0f6932f4829c83bdc0719ae67dd7d50386b75dda41b43272c00d8a3528f",
+      "edits": [
+        {
+          "offset": 132,
+          "before_hex": "a4870000a4870000",
+          "after_hex": "ca870000ca870000"
+        },
+        {
+          "offset": 11250,
+          "before_hex": "a0420eda",
+          "after_hex": "05f0ddbd"
+        },
+        {
+          "offset": 34736,
+          "before_hex": "0000000000000000000000000000000000000000000000000000",
+          "after_hex": "002801dbfaf72ebaf9f77ae80068042801d1faf707bafaf716ba"
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-ME302KL WORKING REPAIRS -- PRIVATE INSTALL BUNDLE, 2026-11-11
+ME302KL WORKING REPAIRS -- PRIVATE INSTALL BUNDLE, 2026-11-12
 
 Only for: LineageOS 17.1, 17.1-20230306-UNOFFICIAL-duma, Android 10.
 NOT for Android 13, other ROM dates, or other tablets. The installer refuses them.
@@ -7,7 +7,7 @@ The shared modem is retained for GPS. Location controls its GPS power adapter.
 
 Includes the tested sensor v2, Bluetooth microphone/HFP, GNSS NMEA crash repair,
 missing GPS libraries, GPS power adapter/configuration, Google configurator
-overlay, and the existing secure-video-decoder workaround. The latter hides an
+overlay, netmgr EINTR retry repair, and the existing secure-video-decoder workaround. The latter hides an
 unusable secure decoder; it does not add DRM support. No thermal experiment,
 kernel replacement, apps, cache clearing or security update is included.
 
