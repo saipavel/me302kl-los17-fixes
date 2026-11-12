@@ -46,7 +46,7 @@
     },
     "sleep_phase_A": "invalidated by user Wi-Fi change and framework crash",
     "complete_wifi_hal_fix_proven": false,
-    "new_sleep_comparison": "Fresh Location ON/OFF comparison prepared, same Wi-Fi ON and Bluetooth OFF; awaiting first unplugged return"
+    "new_sleep_comparison": "Complete: see location-sleep-2026-11-12.json; Location restored, no new Android/native crash or ANR."
   },
   "private_bundle": {
     "name": "ME302KL-LOS17.1-working-repairs-2026-11-12.zip",

@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-12",
+  "rom": "17.1-20230306-UNOFFICIAL-duma",
+  "wifi": "connected in both observations; validated internet after tests",
+  "bluetooth": "off in both observations",
+  "kernel_reboot": false,
+  "framework_restart": false,
+  "new_anr": false,
+  "new_native_crash": false,
+  "time_charging_over_usb_excluded": true,
+  "battery_statistics_reset": "automatic at unplug in each phase; use new battery-powered window, not subtraction across resets",
+  "phase_A": {
+    "location": "on",
+    "modem_mode": "ONLINE",
+    "phase": "A",
+    "statistics_automatically_reset_during_phase": true,
+    "usb_charging_time_excluded": true,
+    "battery_life_gain_established": false,
+    "battery": {
+      "elapsed_seconds": 2526.757,
+      "awake_seconds": 119.967,
+      "estimated_suspend_seconds": 2406.79,
+      "estimated_suspend_fraction": 0.952521354447618
+    },
+    "screen_off": {
+      "elapsed_seconds": 2518.635,
+      "awake_seconds": 111.845,
+      "estimated_suspend_seconds": 2406.79,
+      "estimated_suspend_fraction": 0.9555930097056541
+    }
+  },
+  "phase_B": {
+    "location": "off",
+    "modem_mode": "LOW_POWER",
+    "phase": "B",
+    "statistics_automatically_reset_during_phase": true,
+    "usb_charging_time_excluded": true,
+    "battery_life_gain_established": false,
+    "battery": {
+      "elapsed_seconds": 1050.545,
+      "awake_seconds": 28.544,
+      "estimated_suspend_seconds": 1022.001,
+      "estimated_suspend_fraction": 0.9728293409611202
+    },
+    "screen_off": {
+      "elapsed_seconds": 1046.656,
+      "awake_seconds": 24.655,
+      "estimated_suspend_seconds": 1022.001,
+      "estimated_suspend_fraction": 0.9764440274550569
+    }
+  },
+  "final_settings": {
+    "location": "on",
+    "wifi": "on",
+    "bluetooth": "off",
+    "gps_modem_mode": "ONLINE"
+  },
+  "comparison_limits": [
+    "unequal durations and no repetitions",
+    "battery-state transitions included",
+    "does not isolate modem electrical consumption during suspend",
+    "does not establish battery-life gain",
+    "Bluetooth restart not exercised",
+    "Wi-Fi reload problem remains"
+  ],
+  "extra_resident_process_installed": false,
+  "temporary_dms_probe_removed": true
+}
