@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-12",
+  "new_repair_installed": false,
+  "original_kernel_restored_and_boot_sha256_verified": true,
+  "original_boot_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+  "wcnss_six_firmware_segments_match_local_official_rom": true,
+  "controlled_cycle": {
+    "driver_initialization_success": true,
+    "nv_download_timeout_in_this_cycle": false,
+    "network_validated_with_display_off": false,
+    "wait_seconds": 57.9,
+    "android_restarted_during_cycle": false,
+    "screen_wake_only_restored_validated_internet": true,
+    "screen_wake_seconds": 4.0,
+    "host_before_screen_wake": "Dozing"
+  },
+  "hypothesis": "PNO configured ON_SUSPEND while Android requests scheduled scanning before actual host suspend",
+  "hypothesis_proven": false,
+  "candidate_build": {
+    "original_boot_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+    "candidate_boot_sha256": "3d099f722ddffac15bc8e41d2791cc8af15fc9e990db6b43280840369d2ddc21",
+    "bytes": 16777216,
+    "kernel_change": {
+      "address": "0xc0847cbc",
+      "before_hex": "04c087e5",
+      "after_hex": "04e087e5",
+      "meaning": "Store zero (IMMEDIATE) instead of one (ON_SUSPEND) into PNO mode; scan timer count unchanged"
+    },
+    "xz_bytes_before": 5902604,
+    "xz_bytes_after": 5902520,
+    "zimage_size_unchanged": true,
+    "ramdisk_and_trailing_image_unchanged": true,
+    "device_written": false,
+    "runtime_tested": false
+  },
+  "emulation": {
+    "cases": 12,
+    "intervals_ms": [
+      1000,
+      10000,
+      20000,
+      30000,
+      60000,
+      120000
+    ],
+    "only_mode_changed": true,
+    "scan_timers_enable_and_call_arguments_preserved": true
+  },
+  "public_builder_reproduces_private_candidate": true,
+  "source_patch_applies_to_pinned_sweet_file": true,
+  "temporary_boot_attempt": {
+    "device_entered_bootloader": true,
+    "image_sent": false,
+    "partition_written": false,
+    "blocked_by": "Missing Windows bootloader driver; administrator rights unavailable",
+    "signed_exact_match_official_driver_downloaded": true,
+    "driver_installed": false
+  },
+  "final_state": {
+    "android_booted": true,
+    "wifi_connected_and_internet_validated": true,
+    "location": "on",
+    "wifi": "on",
+    "bluetooth": "off",
+    "netmgr_repair_preserved": true
+  },
+  "remaining": [
+    "Runtime test of PNO candidate on a PC with working fastboot driver",
+    "Separate diagnosis of intermittent Prima/WCNSS reinitialization timeout"
+  ]
+}
