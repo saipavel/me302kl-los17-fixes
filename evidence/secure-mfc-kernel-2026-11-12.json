@@ -1,0 +1,31 @@
+{
+  "kernel": {
+    "old": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+    "new": "9f23948d01aead153fef24423a05fae1973419b2028fa919d5c7cd27313c87d5",
+    "raw_edit_address": "0xc12de87c",
+    "old_size": 8192,
+    "new_size": 270336,
+    "rounded_high_reservation_bytes": 1048576,
+    "compressed_bytes": 5897840
+  },
+  "codec_test": {
+    "official_visible_to_ueventd": true,
+    "official_probe_output": "COMPOSITOR_SURFACE_OK\r\nCREATE_OK ms=20355\r\nCONFIGURE_OK\r\nSTART_OK\r\nSTOP_OK\r\nRELEASE_OK ms=40863\r\n",
+    "official_probe_exit": 0,
+    "original_files_restored": true
+  },
+  "live_heap_size_bytes": 270336,
+  "live_heap_base": "0xa5c00000",
+  "live_heap_end": "0xa5c41fff",
+  "validation": "Lifecycle only; no encoded frames, MediaCrypto, licence or DRM playback tested.",
+  "rollback": {
+    "action": "rollback",
+    "recovery": "3.1.0-1 SevenMaxs",
+    "block": "/dev/block/mmcblk0p14",
+    "bytes": 16777216,
+    "before_sha256": "9f23948d01aead153fef24423a05fae1973419b2028fa919d5c7cd27313c87d5",
+    "after_sha256": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+    "readback_verified": true,
+    "other_partitions_written": false
+  }
+}
