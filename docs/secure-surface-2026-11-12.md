@@ -1,5 +1,7 @@
 # Secure AVC: SurfaceControl, выходные буферы и Widevine
 
+Новый замер: [запрос metadata 176 KiB в MFC heap 8 KiB](secure-ion-measurement-2026-11-12.md).
+
 Продолжение: [аудит совместимости официальной библиотеки](secure-official-library-audit-2026-11-12.md).
 
 12 ноября 2026. Продолжение [исправления входных буферов](secure-buffer-port-2026-11-12.md). Собственный защищённый фильм для этих проверок не нужен.
