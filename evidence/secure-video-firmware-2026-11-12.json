@@ -1,0 +1,584 @@
+{
+  "official": {
+    "files_sha256": {
+      "vidc.mdt": "12c117480a0643e53d76c95ee73851217fd85689f3fe43bc69e168c7d0711d73",
+      "vidc.b00": "87b393d31edbaf4aecb26021aa3298f35248da54154d54ef4565910193c4df99",
+      "vidc.b01": "2f0863b44188d0f391cc6c0281b97b57f9c781e4f7938439aff617de75084f76",
+      "vidc.b02": "5307158ee99e36512003bc130698e9cca19c5ec4c441099147974c6afc1683cf",
+      "vidc.b03": "46cdd6a327dddfabd09d262c034fe962aa34bdf91ac4699e6e82bedbd463ec67",
+      "vidcfw.elf": "83cdc1e14c5457d51003b92cc8993997e111bd06f267b10b157f468c6f67555a"
+    },
+    "metadata_is_header_plus_hash_segment": true,
+    "payload_sha1_matches_table": {
+      "vidc.b00": true,
+      "vidc.b02": true,
+      "vidc.b03": true
+    },
+    "certificates": [
+      {
+        "sha256": "c97e6fe9722c8f17c2515de46995539cc34d3c2ac099dbf70d4ed5a2bc8938bc",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "CA"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "07 0001 SHA256"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "06 0008 MODEL_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "05 00002000 SW_SIZE"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "04 0029 OEM_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "03 000000000000000F DEBUG"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "02 008F10E100290008 HW_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "01 000000000000000E SW_ID"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "ASUSTek Computer Inc"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "William Shih"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QUALCOMM Attestation CA"
+            ]
+          ]
+        ]
+      },
+      {
+        "sha256": "5d655e6e5061b15bdde2f3443320d76c8fd9631ab4d68c7a552f499aa89f523c",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QUALCOMM Attestation CA"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ]
+      },
+      {
+        "sha256": "cc3153a80293939b90d02d3bf8b23e0292e452fef662c74998421adad42a380f",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "installed_copy": {
+    "files_sha256": {
+      "vidc.mdt": "5b5568794e7210795216f220aa7a0b4a1623f8484460fc55780fa38b37437701",
+      "vidc.b00": "87b393d31edbaf4aecb26021aa3298f35248da54154d54ef4565910193c4df99",
+      "vidc.b01": "2361f37d533174a8ae5f4b0bd5470119e3b9e48f93b22760b0b44ed37db1bdd6",
+      "vidc.b02": "9e14deab4a61a9737f891a194519350a6c09b4bdd0a93cbabab74c449b803b20",
+      "vidc.b03": "85abd019ba36c10926d96d74e189d2429b1bdad6bc374bd51e8219982656e13e",
+      "vidcfw.elf": "936eb7c1eed763226642bcbb9cb37d997a35ba21cdede225f254503bc15d9472"
+    },
+    "metadata_is_header_plus_hash_segment": true,
+    "payload_sha1_matches_table": {
+      "vidc.b00": true,
+      "vidc.b02": true,
+      "vidc.b03": true
+    },
+    "certificates": [
+      {
+        "sha256": "7a7370fa6e0d4ac4889a92c0a4419067854dc986349f7b1ba18f2a5ef39aa856",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "CA"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "07 0001 SHA256"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "06 0010 MODEL_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "05 00002000 SW_SIZE"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "04 0029 OEM_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "03 0000000000000000 DEBUG"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "02 008F10E100290010 HW_ID"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "01 000000000000000E SW_ID"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "ASUSTek Computer Inc"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "William Shih"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QUALCOMM Attestation CA"
+            ]
+          ]
+        ]
+      },
+      {
+        "sha256": "5d655e6e5061b15bdde2f3443320d76c8fd9631ab4d68c7a552f499aa89f523c",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QUALCOMM Attestation CA"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ]
+      },
+      {
+        "sha256": "cc3153a80293939b90d02d3bf8b23e0292e452fef662c74998421adad42a380f",
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Diego"
+            ]
+          ],
+          [
+            [
+              "organizationalUnitName",
+              "CDMA Technologies"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "QUALCOMM"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "QCT Root CA 1"
+            ]
+          ]
+        ]
+      }
+    ]
+  }
+}
