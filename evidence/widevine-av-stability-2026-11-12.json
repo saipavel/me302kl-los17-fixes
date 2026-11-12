@@ -1,0 +1,21 @@
+{
+  "audio": {
+    "encrypted_inputs": 483,
+    "decoded_buffers": 480,
+    "pcm_bytes": 1966080,
+    "playback_frames": 491520,
+    "sample_rate": 44100,
+    "audible_user_confirmation": "normal"
+  },
+  "video": {
+    "encrypted_inputs": 1406,
+    "output_frames": 1401,
+    "rendered_callbacks": 1397,
+    "target_output_frames": 1440,
+    "time_budget_ms": 90000,
+    "termination_reason": "Not instrumented: loop can finish at deadline, EOS or frame target. Frame target not reached."
+  },
+  "same_codec_pid_as_mid_test": true,
+  "same_boot_id_as_mid_test": true,
+  "crash_buffer_empty": true
+}
