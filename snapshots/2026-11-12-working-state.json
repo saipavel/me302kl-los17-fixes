@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-12",
+  "timezone": "Europe/Sofia",
+  "status": "last_confirmed_baseline_not_fresh_live_capture",
+  "compiled_from_repo_commit": "d816dc9deba3f4a39a5b73f8a3b5d7366f6136ee",
+  "live_capture_attempt": "ADB device unavailable when preparing snapshot; no tablet writes performed",
+  "rom": {
+    "device": "ASUS ME302KL / duma",
+    "android": "10",
+    "lineage": "17.1-20230306-UNOFFICIAL-duma"
+  },
+  "boot": {
+    "sha256": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+    "partition_expected": "/dev/block/mmcblk0p14",
+    "bytes": 16777216,
+    "repair": "wifi-watchdog-completion",
+    "included_in_existing_bundle": false
+  },
+  "system_repair_manifest": {
+    "format": 1,
+    "rom": "17.1-20230306-UNOFFICIAL-duma",
+    "wifi_only": true,
+    "files": {
+      "/vendor/bin/sensors.qcom": {
+        "payload": "0.bin",
+        "sha256": "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+        "accepted": [
+          "6bb266619a744ca166f1e71e39897fb0205a4ddaecb993034f96711ce9228607",
+          "9c0382d044af946ce755feaa7938e1a48c6773edc2ef8a6396a6443634b55f9b",
+          "92c61ca6d25e155e6da045195ea76292d4e2eb78c07c5db5ba9b8ceaa50d13cc"
+        ],
+        "uid": 0,
+        "gid": 2000,
+        "mode": "755",
+        "label": "u:object_r:sensors_exec:s0"
+      },
+      "/system/lib/libbluetooth.so": {
+        "payload": "1.bin",
+        "sha256": "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+        "accepted": [
+          "6b3ba17faa92a477d5243e6615a7ddefb28553699264b31be728be1317d4f3a5",
+          "2098343de9aafe4710e7dbc422ff3219bc75548f13d5a2abc6829ca94aaac68d"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:system_lib_file:s0"
+      },
+      "/vendor/lib/hw/android.hardware.gnss@1.0-impl.so": {
+        "payload": "2.bin",
+        "sha256": "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+        "accepted": [
+          "9d2242bd420d18a4354e56cfa5a804a16abf2e1cb003ee5d341d58f9e48c50b2",
+          "40a4f8f8525733bf9eb6a65a94a5a2389f430e87c5a474bd984b9647f3df7c10"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_file:s0"
+      },
+      "/vendor/lib/hw/gps.msm8960.so": {
+        "payload": "3.bin",
+        "sha256": "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+        "accepted": [
+          "0dc65723709bac4b8574bcedb9285a72405f6ee7d4d7f26965d5405667e70016",
+          null,
+          "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_file:s0"
+      },
+      "/vendor/lib/hw/gps.msm8960.base.so": {
+        "payload": "4.bin",
+        "sha256": "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+        "accepted": [
+          "d251c672b0baf911aff7e57086bcab2b349a3040d370d99e30019dd3ea157178",
+          null
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:system_file:s0"
+      },
+      "/vendor/lib/libgps.utils.so": {
+        "payload": "5.bin",
+        "sha256": "10c99e64ad4643e70377980fbc4debd36c41b91c7e6f835481ebd71f2d5ee77c",
+        "accepted": [
+          "10c99e64ad4643e70377980fbc4debd36c41b91c7e6f835481ebd71f2d5ee77c",
+          null
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_file:s0"
+      },
+      "/system/etc/gps_debug.conf": {
+        "payload": "6.bin",
+        "sha256": "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+        "accepted": [
+          "02624280a6fe40c2587dd4acebce0119bcc779a70cae4f5fd26aec94b2b9b679",
+          "336f1c49c575c018e1d07b107afd5db25cb1e8a22a7d4f5afa0a41c1c25220e7"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:system_file:s0"
+      },
+      "/vendor/build.prop": {
+        "payload": "7.bin",
+        "sha256": "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
+        "accepted": [
+          "eeff1b8c29532aa74dcfe5edee7daeda698a27d8b14fb1f4e0513086a212785a",
+          "114ab2a533b55d5a2d41e7aeeee50a29d34572e29a4a40a2fdf97052b7f53e3e"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "600",
+        "label": "u:object_r:vendor_file:s0"
+      },
+      "/vendor/etc/init/me302kl-cellular-disabled.rc": {
+        "payload": "8.bin",
+        "sha256": "184e63aefe14815179372157ceb0865005f3768c1435acc16025a804637ffeee",
+        "accepted": [
+          "184e63aefe14815179372157ceb0865005f3768c1435acc16025a804637ffeee",
+          null
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_configs_file:s0"
+      },
+      "/system/product/overlay/Me302klConfigurator/Me302klConfiguratorOverlay.apk": {
+        "payload": "9.bin",
+        "sha256": "105fa4a3ac1a1d407c23f3f248aca4a1b318039bc20d3ca3a50e3c9422cd88f9",
+        "accepted": [
+          "105fa4a3ac1a1d407c23f3f248aca4a1b318039bc20d3ca3a50e3c9422cd88f9",
+          null
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_overlay_file:s0"
+      },
+      "/vendor/etc/media_codecs.xml": {
+        "payload": "10.bin",
+        "sha256": "61b54df613f6a0b8a4084562a0583067e12ba6a714868e44e72fc0f79c7f22e9",
+        "accepted": [
+          "61b54df613f6a0b8a4084562a0583067e12ba6a714868e44e72fc0f79c7f22e9",
+          "9543968d37830b85a7501a6152b5551e428a27b1ff74ac41b452d620cadca259"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_configs_file:s0"
+      },
+      "/vendor/lib/libnetmgr.so": {
+        "payload": "11.bin",
+        "sha256": "b0e7c0f6932f4829c83bdc0719ae67dd7d50386b75dda41b43272c00d8a3528f",
+        "accepted": [
+          "b0e7c0f6932f4829c83bdc0719ae67dd7d50386b75dda41b43272c00d8a3528f",
+          "f74b5603007fa892389560ea381588684ed6d0b9cb9032d9098203e7f337b928"
+        ],
+        "uid": 0,
+        "gid": 0,
+        "mode": "644",
+        "label": "u:object_r:vendor_file:s0"
+      }
+    },
+    "dependencies": {
+      "/vendor/lib/libloc_eng.so": "738150c1cfc134a473b7591f962a083edb5e809f1691dc9e10c5d0197329df6a",
+      "/vendor/lib/libloc_core.so": "bda70bd2e651f768648e76fc57c771d6ba6c2084a439c971e9c0cb6f4298a0d1",
+      "/vendor/lib/libloc_api_v02.so": "057dc76d46efb8b577f91e13d76d16d87b464897fa22e1d8ac65d13ba371705d",
+      "/vendor/lib/libloc_ds_api.so": "81fc15c00f256c0a0bd6e5a08d24238c4291046000f015296501bfe45ca5d24f"
+    },
+    "experimental_thermal_included": false,
+    "boot_image_included": false
+  },
+  "additional_symlink": {
+    "/system/etc/gps.conf": "/vendor/etc/gps.conf"
+  },
+  "desired_configuration_not_live_rechecked": {
+    "global": {
+      "bluetooth_disabled_profiles": "0",
+      "mobile_data": "0",
+      "data_roaming": "0",
+      "airplane_mode_radios": "cell,nfc,wimax"
+    },
+    "properties": {
+      "persist.me302kl.cellular_disabled": "1",
+      "persist.me302kl.gps_power_control": "1"
+    },
+    "disabled_packages_if_installed": [
+      "com.android.phone",
+      "com.android.mms.service",
+      "com.google.android.carriersetup"
+    ]
+  },
+  "widevine": {
+    "security_level": "L3",
+    "provisioning": "completed_on_this_device",
+    "validated": [
+      "fresh-process session",
+      "test licence",
+      "encrypted AVC decoding and rendering",
+      "encrypted AAC and audible output"
+    ],
+    "portable_files_in_patch": false,
+    "secrets_must_not_be_copied": true
+  },
+  "retained_original_video_stack": {
+    "decoder_sha256": "4437d8b36695ffd0e528b22eb4f305fd2836356ed2fbff8b4a783faca0fcf476",
+    "firmware_files_sha256": {
+      "vidc.mdt": "5b5568794e7210795216f220aa7a0b4a1623f8484460fc55780fa38b37437701",
+      "vidc.b00": "87b393d31edbaf4aecb26021aa3298f35248da54154d54ef4565910193c4df99",
+      "vidc.b01": "2361f37d533174a8ae5f4b0bd5470119e3b9e48f93b22760b0b44ed37db1bdd6",
+      "vidc.b02": "9e14deab4a61a9737f891a194519350a6c09b4bdd0a93cbabab74c449b803b20",
+      "vidc.b03": "85abd019ba36c10926d96d74e189d2429b1bdad6bc374bd51e8219982656e13e",
+      "vidcfw.elf": "936eb7c1eed763226642bcbb9cb37d997a35ba21cdede225f254503bc15d9472"
+    },
+    "secure_codec_advertised": false
+  },
+  "excluded_experiments": [
+    "thermal HAL/startup experiments",
+    "PNO/atomic-packet/WCNSS experiments other than installed watchdog completion",
+    "official VIDC replacement",
+    "secure-input port decoder patch",
+    "MFC heap 264 KiB test kernel",
+    "L1/OEMCrypto replacement"
+  ],
+  "existing_private_bundle": {
+    "filename": "ME302KL-LOS17.1-working-repairs-2026-11-12.zip",
+    "sha256": "5ed9cc87d639bd200427b14c5655c56a2a01169447c3f522e26f5b456462f96f",
+    "all_12_payload_hashes_verified_on_host": true,
+    "manifest_matches_private_source": true,
+    "complete_combined_patch": false
+  },
+  "privacy_exclusions": [
+    "serial",
+    "IMEI/EFS",
+    "accounts",
+    "Wi-Fi credentials",
+    "DRM provisioning material",
+    "userdata",
+    "raw logs"
+  ]
+}
