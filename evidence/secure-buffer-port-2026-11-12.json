@@ -1,0 +1,34 @@
+{
+  "status": "experimental_not_installed",
+  "patch": {
+    "original_sha256": "4437d8b36695ffd0e528b22eb4f305fd2836356ed2fbff8b4a783faca0fcf476",
+    "patched_sha256": "7234ee1eeece5bee1edda3b902e12950d8ce5989f46808cbe2e446ad78c51514",
+    "branch_va": "0x1bea8",
+    "original_branch_bytes": "e8684af2",
+    "cave_va": "0x27cd0",
+    "cave_size": 28,
+    "assembly": "ldr r0, [r5, #8]; cmp r0, #0; beq input; b.w 0x1c6b0; input: ldr r0, [r5, #12]; movw r1, #0xa09d; cmp r0, #0; it ne; movne r0, #1; strb r0, [r4, r1]; b.w 0x1c6b0"
+  },
+  "unpatched": {
+    "create_ms": 20271,
+    "configure": "pass",
+    "start": "media.codec SIGSEGV native handle 0xb fault address 0xf"
+  },
+  "patched": {
+    "create_ms": 20254,
+    "configure": "pass",
+    "secure_input_buffers_allocated": 2,
+    "start": "rejected: SurfaceTexture consumer cannot handle protected buffers",
+    "release_total_ms": 40519,
+    "codec_service_crash": false
+  },
+  "post_rollback_normal_avc": [
+    "CREATE_OK",
+    "CONFIGURE_OK",
+    "START_OK",
+    "STOP_OK",
+    "RELEASE_OK ms=222"
+  ],
+  "pil_refcount_after_rollback": 0,
+  "validation_limit": "No MediaCrypto, DRM licence, decoded frames or protected display tested. One corrected on-device patch run."
+}
