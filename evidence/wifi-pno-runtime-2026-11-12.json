@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-12",
+  "owner_authorized_recovery_boot_test": true,
+  "install": {
+    "action": "candidate",
+    "recovery": "3.1.0-1 SevenMaxs",
+    "block": "/dev/block/mmcblk0p14",
+    "bytes": 16777216,
+    "before_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+    "after_sha256": "3d099f722ddffac15bc8e41d2791cc8af15fc9e990db6b43280840369d2ddc21",
+    "readback_verified": true,
+    "other_partitions_written": false
+  },
+  "test_results": {
+    "wifi_toggle_trial": "Blocked before PNO validation by NV-download timeout and failed watchdog recovery",
+    "isolated_disconnect_trial": {
+      "driver_reloaded": false,
+      "new_nv_download_timeout": false,
+      "display": "OFF",
+      "usb_connected": true,
+      "validated_reconnect": false,
+      "observed_seconds": 60.36
+    },
+    "pno_improvement_demonstrated": false
+  },
+  "rollback": {
+    "action": "rollback",
+    "recovery": "3.1.0-1 SevenMaxs",
+    "block": "/dev/block/mmcblk0p14",
+    "bytes": 16777216,
+    "before_sha256": "3d099f722ddffac15bc8e41d2791cc8af15fc9e990db6b43280840369d2ddc21",
+    "after_sha256": "5d7dd05fd96a1e8041c456ba1ff5018ac98bb0418cf38b521f8e602651316e62",
+    "readback_verified": true,
+    "other_partitions_written": false
+  },
+  "final_state": {
+    "android_booted": true,
+    "original_boot_hash_reverified_in_android": true,
+    "wifi_connected_and_internet_validated": true,
+    "working_repair_bundle_file_changes_needed": 0,
+    "location": "on",
+    "wifi": "on",
+    "bluetooth": "off",
+    "rooted_debugging_retained": true
+  },
+  "watchdog_finding": {
+    "failure_exit_omits_shutdown_completion": true,
+    "close_waits_for_missing_completion": true,
+    "runtime_hal_wait_channel": "vos_watchdog_close",
+    "reference_source_and_original_kernel_disassembly_checked": true,
+    "source_patch_applies": true,
+    "replacement_kernel_built": false,
+    "installed": false,
+    "initial_nv_download_fault_fixed": false
+  }
+}

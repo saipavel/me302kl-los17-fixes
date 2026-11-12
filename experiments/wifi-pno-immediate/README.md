@@ -1,6 +1,8 @@
 # EXPERIMENTAL: Prima scheduled scan before host suspend
 
-**Not installed or runtime-tested. Not part of the working-repairs bundle.**
+**Tested through TWRP, no improvement demonstrated, rolled back. Not part of the working-repairs bundle.**
+
+The later [runtime test and rollback](../../docs/wifi-pno-runtime-2026-11-12.md) supersede the original test limitation below. The first Wi-Fi-toggle trial hit the separate NV-download timeout before testing PNO. After a clean reboot, a disconnect-only trial avoided driver reload but still did not regain validated internet within 60.36 seconds with the screen OFF. The original boot image was restored and verified. This candidate must not be used as a working repair.
 
 The current tablet's kernel configures PNO with `SIR_PNO_MODE_ON_SUSPEND`.
 Android 10 requests PNO while the display is off, including while USB keeps
@@ -43,12 +45,12 @@ The prepared private candidate on the owner's PC has SHA-256
 `3d099f722ddffac15bc8e41d2791cc8af15fc9e990db6b43280840369d2ddc21`.
 Full images contain the owner's firmware and are not published.
 
-## Required next test
+## Original temporary-boot plan (historical)
 
 Use a PC with a working signed ASUS bootloader driver. The attempted driver
 installation on the current PC was not performed because administrator
 rights were unavailable. The original boot partition was verified unchanged
-after returning to Android. The candidate has never been sent to fastboot.
+after returning to Android. The candidate has never been sent to fastboot. Later, with explicit owner authorization, it was installed and tested through TWRP, then rolled back. This alternative needs no Windows bootloader driver or Windows administrator privileges.
 
 First use **temporary RAM boot only**, if the bootloader supports it:
 

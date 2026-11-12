@@ -1,0 +1,11 @@
+--- a/drivers/staging/prima/CORE/VOSS/src/vos_sched.c
++++ b/drivers/staging/prima/CORE/VOSS/src/vos_sched.c
+@@ -762,7 +762,7 @@
+ err_reset:
+     VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_FATAL,
+       "%s: Watchdog Thread Failed to Reset, Exiting!!!!", __func__);
+-    return 0;
++    complete_and_exit(&pWdContext->WdShutdown, 0);
+
+ } /* VosMCThread() */
+

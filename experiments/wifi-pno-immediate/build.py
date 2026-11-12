@@ -44,5 +44,5 @@ if __name__=='__main__':
     p.add_argument('original',type=Path);p.add_argument('output',type=Path)
     a=p.parse_args();result=build(a.original.read_bytes())
     with a.output.open('xb') as f:f.write(result)
-    print('PRIVATE, UNTESTED candidate SHA-256:',hashlib.sha256(result).hexdigest())
+    print('PRIVATE experimental image (not a validated repair), SHA-256:',hashlib.sha256(result).hexdigest())
     print('No tablet accessed. No partition flashed. Do not publish the full image.')
