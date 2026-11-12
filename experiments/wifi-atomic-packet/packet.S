@@ -1,0 +1,121 @@
+.syntax unified
+.arm
+.section .text.packet,"ax",%progbits
+.global packet
+.type packet,%function
+packet:
+    push {r4-r8,lr}
+    sub sp,sp,#24
+    mov r4,r0
+    mov r5,r1
+    mov r6,r2
+    str r3,[sp,#20]
+    cmp r6,#0
+    blt invalid
+    beq return_len
+    ldr r7,[r4,#0x1fc]
+    ldr r0,[r4]
+    ldr r3,[r7,#0x54]
+    blx r3
+    mov r8,r0
+    ldr r0,[r4]
+    ldr r3,[r7,#0x4c]
+    blx r3
+    ldr r1,[r4,#0x14]
+    sub r0,r8,r0
+    and r0,r0,r1
+    sub r0,r1,r0
+    add r2,r6,#20
+    cmp r0,r2
+    blo no_space
+    str r6,[sp]
+    mov r0,#0
+    str r0,[sp,#4]
+    str r0,[sp,#8]
+    str r0,[sp,#12]
+    str r0,[sp,#16]
+    ldr r0,[sp,#20]
+    cmp r0,#0
+    bne fallback
+    ldr r0,[r4,#0x24]
+    cmp r0,#18
+    bne fallback
+    ldr r0,[r4,#0x1f0]
+    cmp r0,#6
+    bne fallback
+    cmp r5,#0
+    beq fallback
+    mov r0,r4
+    bl kernel_open
+    cmp r0,#0
+    beq header_error
+    str r5,[sp,#20]
+    mov r5,sp
+    mov r7,#20
+copy_loop:
+    ldr r2,[r4,#0x10]
+    sub r2,r2,r8
+    cmp r2,r7
+    movhi r2,r7
+    ldr r0,[r4,#8]
+    add r0,r0,r8
+    mov r1,r5
+    add r5,r5,r2
+    sub r7,r7,r2
+    add r8,r8,r2
+    ldr r3,[r4,#0x14]
+    and r8,r8,r3
+    bl memcpy
+    cmp r7,#0
+    bne copy_loop
+    ldr r5,[sp,#20]
+    cmp r5,#0
+    beq publish
+    mov r0,#0
+    str r0,[sp,#20]
+    mov r7,r6
+    b copy_loop
+publish:
+    dsb sy
+    ldr r7,[r4,#0x1fc]
+    ldr r0,[r4]
+    mov r1,r8
+    ldr r3,[r7,#0x50]
+    blx r3
+    dsb sy
+    ldr r0,[r4]
+    mov r1,#1
+    ldr r3,[r7,#0x28]
+    blx r3
+    dsb sy
+    ldr r3,[r4,#0x4c]
+    blx r3
+return_len:
+    mov r0,r6
+return_value:
+    add sp,sp,#24
+    pop {r4-r8,pc}
+fallback:
+    mov r0,r4
+    mov r1,sp
+    mov r2,#20
+    mov r3,#0
+    bl kernel_stream
+    cmp r0,#20
+    bne header_error
+    mov r0,r4
+    mov r1,r5
+    mov r2,r6
+    ldr r3,[sp,#20]
+    bl kernel_stream
+    b return_value
+invalid:
+    mvn r0,#21
+    b return_value
+no_space:
+    mvn r0,#11
+    b return_value
+header_error:
+    mvn r0,#0
+    b return_value
+.size packet,.-packet

@@ -1,0 +1,11 @@
+{
+  "cases": 865,
+  "executions": 1730,
+  "atomic_visibility_at_commit": true,
+  "single_notification_for_wlan_kernel_packets": true,
+  "other_channels_and_user_buffers_keep_stream_calls": true,
+  "return_bytes_and_callee_saved_registers_match_original": true,
+  "arm_frame_layout_preserved": true,
+  "code_bytes": 424,
+  "slot_bytes": 488
+}
