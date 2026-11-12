@@ -1,0 +1,85 @@
+{
+  "comparison": "C tokens: comments and whitespace ignored; __FUNCTION__ normalized to __func__; preprocessing, types and macros not evaluated",
+  "files": {
+    "wlan_qct_wdi.c": {
+      "sweet_sha256": "940bfb7ea944ac05f514292bab1e17660d5272649da81a428aa5f2de15dbf946",
+      "branches": {
+        "net/wireless": {
+          "sha256": "631e981404f13857a51dde2f66023430626234729554b7806bc48614ad7dce3a",
+          "functions": {
+            "WDI_SendNvBlobReq": "equal_tokens",
+            "WDI_ProcessNvDownloadReq": "equal_tokens",
+            "WDI_ProcessNvDownloadRsp": "equal_tokens",
+            "WDI_GetMessageBuffer": "equal_tokens",
+            "WDI_SendMsg": "equal_tokens",
+            "WDI_ResponseTimerCB": "different_tokens"
+          }
+        },
+        "staging": {
+          "sha256": "6431a654a61c926c5d58960a50f327bea088940ac99bd651c1946a508ab036a8",
+          "functions": {
+            "WDI_SendNvBlobReq": "equal_tokens",
+            "WDI_ProcessNvDownloadReq": "equal_tokens",
+            "WDI_ProcessNvDownloadRsp": "equal_tokens",
+            "WDI_GetMessageBuffer": "equal_tokens",
+            "WDI_SendMsg": "different_tokens",
+            "WDI_ResponseTimerCB": "different_tokens"
+          }
+        }
+      }
+    },
+    "wlan_qct_wdi_cts.c": {
+      "sweet_sha256": "1c80b939c52b9a0a963398feecbf12bc36ded70ac1576ae1217839683c205537",
+      "branches": {
+        "net/wireless": {
+          "sha256": "1c80b939c52b9a0a963398feecbf12bc36ded70ac1576ae1217839683c205537",
+          "functions": {
+            "WCTS_OpenTransport": "equal_tokens",
+            "WCTS_CloseTransport": "equal_tokens",
+            "WCTS_SendMessage": "equal_tokens",
+            "WCTS_PALReadCallback": "equal_tokens",
+            "WCTS_PALWriteCallback": "equal_tokens",
+            "WCTS_PALDataCallback": "equal_tokens",
+            "WCTS_NotifyCallback": "equal_tokens"
+          }
+        },
+        "staging": {
+          "sha256": "6ff91008ecceb30e94f4e7c06edac6ecff879e9512b4a7c567f0f9f7a42237cc",
+          "functions": {
+            "WCTS_OpenTransport": "equal_tokens",
+            "WCTS_CloseTransport": "equal_tokens",
+            "WCTS_SendMessage": "different_tokens",
+            "WCTS_PALReadCallback": "equal_tokens",
+            "WCTS_PALWriteCallback": "equal_tokens",
+            "WCTS_PALDataCallback": "equal_tokens",
+            "WCTS_NotifyCallback": "equal_tokens"
+          }
+        }
+      }
+    },
+    "wlan_qct_pal_device.c": {
+      "sweet_sha256": "ce1e3c8924e48da681df4d3c025a3ed352e665661f2d9695bce553c786f2f41e",
+      "branches": {
+        "net/wireless": {
+          "sha256": "ce1e3c8924e48da681df4d3c025a3ed352e665661f2d9695bce553c786f2f41e",
+          "functions": {
+            "wpalDeviceInit": "equal_tokens",
+            "wpalDeviceClose": "equal_tokens"
+          }
+        },
+        "staging": {
+          "sha256": "fa654b88b66347c4dcb00e750ec12730201831d5a51496401872300925267f17",
+          "functions": {
+            "wpalDeviceInit": "different_tokens",
+            "wpalDeviceClose": "different_tokens"
+          }
+        }
+      }
+    }
+  },
+  "smd": {
+    "asus_sha256": "2d58284ef253736224d665c86818939e688e35d99d4d85faad327fc15b984464",
+    "sweet_sha256": "2d58284ef253736224d665c86818939e688e35d99d4d85faad327fc15b984464",
+    "identical_bytes": true
+  }
+}
