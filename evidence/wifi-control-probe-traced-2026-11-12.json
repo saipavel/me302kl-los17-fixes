@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "cycle": 1,
+      "first_validated_seconds": 24.94,
+      "retry_validated_seconds": null,
+      "connected": true
+    }
+  ],
+  "traced_reload": {
+    "nv_requests": 10,
+    "nv_responses": 10,
+    "nv_timeout": false,
+    "diagnostic_probe": false
+  }
+}

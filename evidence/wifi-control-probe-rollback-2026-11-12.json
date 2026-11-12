@@ -1,0 +1,10 @@
+{
+  "action": "rollback",
+  "recovery": "3.1.0-1 SevenMaxs",
+  "block": "/dev/block/mmcblk0p14",
+  "bytes": 16777216,
+  "before_sha256": "fadd831c1e5caa8153107441250ddff5b94eeec61eaa14741c4a24cffb95d1cd",
+  "after_sha256": "d2cacd5c413e13a17489b7161062f2e9edbe53c3044c33368380d66df80b8cfc",
+  "readback_verified": true,
+  "other_partitions_written": false
+}

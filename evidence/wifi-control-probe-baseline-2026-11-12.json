@@ -1,0 +1,7 @@
+{
+  "version": "01040102",
+  "probe": "[   50.773284] me302kl_ctrl_probe tx=8 state=2 (1=no reply,2=reply,3=no space)",
+  "healthy_reply_received": true,
+  "duplicate_nv_upload_not_observed": true,
+  "crash_buffer_empty": true
+}

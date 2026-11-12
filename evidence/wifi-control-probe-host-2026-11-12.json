@@ -1,0 +1,15 @@
+{
+  "cases": 97,
+  "code_bytes": 368,
+  "nv_only_once_per_boot": true,
+  "packet_type_and_length_verified": true,
+  "delay_only_on_successful_write_ms": 250,
+  "diagnostic_reply_skips_nv_reload": true,
+  "normal_reply_preserves_original_major_load": true,
+  "registers_and_stack_verified": true,
+  "symbols": {
+    "probe": 3234852864,
+    "response_gate": 3234853060,
+    "show_probe": 3234853112
+  }
+}
